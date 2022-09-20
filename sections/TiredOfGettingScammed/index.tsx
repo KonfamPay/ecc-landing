@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ThankYou } from "..";
 
 export const TiredOfGettingScammed = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
