@@ -23,7 +23,7 @@ const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type }) => {
 				</div>
 			) : (
 				<div
-					style={{ width: "175px" }}
+					style={{ width: "175px", marginRight: "0.5rem" }}
 					className="flex flex-col items-center  justify-center h-[160px] bg-white border-[1px] mr-2 border-solid border-eccblue rounded-[14px]"
 				>
 					<p className="font-semibold text-[12px]">{item1}</p>
