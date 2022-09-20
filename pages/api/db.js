@@ -8,7 +8,6 @@ module.exports = {
 		MongoClient.connect(uri)
 			.then((client) => {
 				dbConnection = client.db();
-				console.log(dbConnection);
 				return cb();
 			})
 			.catch((err) => {

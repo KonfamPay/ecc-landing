@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 	connectToDb((err) => {
 		if (!err) {
 			db = getDb();
-			console.log(db);
+			console.log(err);
 		}
 	});
 	const { email } = req.body;
@@ -39,8 +39,7 @@ export default async function handler(req, res) {
 		`,
 	};
 
-	const addTo = async () => {
-		console.log(db);
+	const addTo = () => {
 		db.collection("waitlist")
 			.insertOne(email)
 			.then((result) => {
