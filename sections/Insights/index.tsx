@@ -1,4 +1,5 @@
 import Box from "../../Components/InsightBoxes";
+import CountUp from "react-countup";
 
 export const Insights: React.FC = () => {
 	return (
@@ -23,16 +24,16 @@ export const Insights: React.FC = () => {
 							<Box
 								type="big"
 								item1="Total Cases Identified"
-								item2="18,395"
+								item2={18395}
 								item3="Confirmed Causes"
-								item4="16,960"
+								item4={16960}
 							/>
 							<Box
 								type="big"
 								item1="False Cases"
-								item2="1,435"
+								item2={1435}
 								item3="Recurring from the same Scam Accounts"
-								item4="4,532"
+								item4={4532}
 							/>
 						</div>
 						<div className="flex flex-col justify-center items-center w-[220px] h-[200px] bg-white border-[3px] top-7  relative border-solid border-eccblue rounded-[14px]">
@@ -43,7 +44,14 @@ export const Insights: React.FC = () => {
 									src="./assets/Images/NairaSign.svg"
 									alt=""
 								/>{" "}
-								<span>357,634,625</span>
+								<span>
+									{" "}
+									<CountUp
+										duration={10}
+										start={0}
+										end={357634625}
+									></CountUp>
+								</span>
 							</div>
 							<p className="font-semibold text-[16px]">Avg. Daily Scam Report</p>
 							<div className="font-semibold text-[20.4px] flex flex-row items-center text-eccblue">
@@ -52,7 +60,13 @@ export const Insights: React.FC = () => {
 									src="./assets/Images/NairaSign.svg"
 									alt=""
 								/>{" "}
-								<span>450,000</span>
+								<span>
+									<CountUp
+										duration={10}
+										start={0}
+										end={450000}
+									></CountUp>
+								</span>
 							</div>
 						</div>
 					</div>
@@ -68,16 +82,16 @@ export const Insights: React.FC = () => {
 						<Box
 							type="small"
 							item1="Total Cases Identified"
-							item2="18,395"
+							item2={18395}
 							item3="Confirmed Causes"
-							item4="16,960"
+							item4={16960}
 						/>
 						<Box
 							type="small"
 							item1="False Cases"
-							item2="1,435"
+							item2={1435}
 							item3="Recurring from the same Scam Accounts"
-							item4="4,532"
+							item4={4532}
 						/>
 					</div>
 					<div className="flex flex-col justify-center items-center w-[170px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]">
@@ -88,7 +102,13 @@ export const Insights: React.FC = () => {
 								src="./assets/Images/NairaSign.svg"
 								alt=""
 							/>{" "}
-							<span>357,634,625</span>
+							<span>
+								<CountUp
+									duration={50}
+									start={0}
+									end={357634625}
+								></CountUp>
+							</span>
 						</div>
 						<p className="font-semibold text-[12px]">Avg. Daily Scam Report</p>
 						<div className="font-semibold text-[14.4px] flex flex-row items-center text-eccblue">
@@ -97,7 +117,13 @@ export const Insights: React.FC = () => {
 								src="./assets/Images/NairaSign.svg"
 								alt=""
 							/>{" "}
-							<span>450,000</span>
+							<span>
+								<CountUp
+									duration={50}
+									start={0}
+									end={450000}
+								></CountUp>{" "}
+							</span>
 						</div>
 					</div>
 				</div>
