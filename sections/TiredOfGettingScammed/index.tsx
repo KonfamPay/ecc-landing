@@ -12,30 +12,34 @@ export const TiredOfGettingScammed = () => {
 
 	const handleContactFormSubmit = async (e: any) => {
 		e.preventDefault();
-		try {
-			const response = await fetch("http://127.0.0.1:3001/waitlist", {
-				method: "POST",
-				headers: {
-					Accept: "application/json, text/plain, */*",
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(contactFormData),
-			});
-
-			if (response.status === 201) {
-				setFormState({ submitted: true, success: true });
-				setContactFormData({
-					email: "",
+		if (contactFormData.email.length > 10) {
+			try {
+				const response = await fetch("http://127.0.0.1:3001/waitlist", {
+					method: "POST",
+					headers: {
+						Accept: "application/json, text/plain, */*",
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(contactFormData),
 				});
-				window.alert("Message sent!");
+
+				if (response.status === 201) {
+					setFormState({ submitted: true, success: true });
+					setContactFormData({
+						email: "",
+					});
+					window.alert("Message sent!");
+				}
+			} catch (error) {
+				window.alert("Error Sending Message 😢. Try again 🤕.");
+				setFormState({
+					submitted: true,
+					success: false,
+					message: error.message,
+				});
 			}
-		} catch (error) {
-			window.alert("Error Sending Message 😢. Try again 🤕.");
-			setFormState({
-				submitted: true,
-				success: false,
-				message: error.message,
-			});
+		} else {
+			window.alert("Email Address should be longer than 10 characters");
 		}
 	};
 	return (
@@ -50,9 +54,7 @@ export const TiredOfGettingScammed = () => {
 							onSubmit={handleContactFormSubmit}
 						>
 							<input
-								type="text"
-								name=""
-								id=""
+								type="email"
 								className="placeholder:text-[#B4A5A5] text-[12px] lg:text-[18px] w-[250px] lg:w-[520px] rounded-[5px] outline-none bg-[#FFFFFF] lg:rounded-[12px] px-[10px] py-[6px] lg:p-[16px] text-[#000000]"
 								placeholder="Enter your email address here"
 								value={contactFormData.email}
