@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import HeroSection from "../sections/HeroSection";
 import { Footer, Insights, NavBar, TiredOfGettingScammed, WhatWeOffer } from "../sections";
+import { useState } from "react";
 
 const Home: NextPage = () => {
 	return (

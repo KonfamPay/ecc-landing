@@ -1,4 +1,43 @@
+import { useState } from "react";
+
 export const TiredOfGettingScammed = () => {
+	const [contactFormData, setContactFormData] = useState({
+		email: "",
+	});
+	const [formState, setFormState] = useState<any>({
+		submitted: false,
+		success: false,
+		message: null,
+	});
+
+	const handleContactFormSubmit = async (e: any) => {
+		e.preventDefault();
+		try {
+			const response = await fetch("http://127.0.0.1:3001/waitlist", {
+				method: "POST",
+				headers: {
+					Accept: "application/json, text/plain, */*",
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(contactFormData),
+			});
+
+			if (response.status === 201) {
+				setFormState({ submitted: true, success: true });
+				setContactFormData({
+					email: "",
+				});
+				window.alert("Message sent!");
+			}
+		} catch (error) {
+			window.alert("Error Sending Message 😢. Try again 🤕.");
+			setFormState({
+				submitted: true,
+				success: false,
+				message: error.message,
+			});
+		}
+	};
 	return (
 		<>
 			<div className="flex px-[0px] lg:px-[100px] justify-between items-center py-[20px] lg:pt-[235px]">
@@ -6,15 +45,30 @@ export const TiredOfGettingScammed = () => {
 					<div className="lg:w-[700px] flex flex-col gap-[16px]">
 						<h1 className="text-[#0B63C5] text-[18px] text-center lg:text-left lg:text-[30px] px-[30px] lg:px-[0] font-medium">Tired of Getting Scammed by Online Vendors and Complanies?</h1>
 						<p className="text-[#434343] text-[14px] text-center lg:text-left lg:text-[20px] px-[30px] lg:px-[0]">Join our fight against Diam eget elementum pellentesque et urna. Sign up for our waitlist to be the first person to know when we launch. </p>
-						<form className="lg:pt-[66px] px-[24px] lg:px-[unset] flex gap-[7px] w-[100%] lg:gap-[21px]">
+						<form
+							className="lg:pt-[66px] px-[24px] lg:px-[unset] flex gap-[7px] w-[100%] lg:gap-[21px]"
+							onSubmit={handleContactFormSubmit}
+						>
 							<input
 								type="text"
 								name=""
 								id=""
 								className="placeholder:text-[#B4A5A5] text-[12px] lg:text-[18px] w-[250px] lg:w-[520px] rounded-[5px] outline-none bg-[#FFFFFF] lg:rounded-[12px] px-[10px] py-[6px] lg:p-[16px] text-[#000000]"
 								placeholder="Enter your email address here"
+								value={contactFormData.email}
+								onChange={(e) =>
+									setContactFormData({
+										...contactFormData,
+										email: e.target.value,
+									})
+								}
 							/>
-							<button className="py-[6px] px-[12px] lg:py-[16px] lg:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] lg:rounded-[12px] text-[#FFFFFF] text-[12px] lg:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)]">Join Waitlist</button>
+							<input
+								type="submit"
+								id="submit"
+								className="py-[6px] px-[12px] lg:py-[16px] lg:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] lg:rounded-[12px] text-[#FFFFFF] text-[12px] lg:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-md transition-all lg:active:translate-y-[5px] cursor-pointer"
+								value="Join Waitlist"
+							/>
 						</form>
 					</div>
 					<div className="rounded-[20px] border-[#0B63C5] border-[3px] border-dashed p-[8px] lg:p-[28px] lg:w-[434px] absolute top-[-70px] left-[50%] translate-x-[-50%] lg:left-[unset] lg:translate-x-[unset] lg:right-[-50px] flex justify-center">
