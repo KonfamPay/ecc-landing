@@ -61,8 +61,8 @@ export const Footer = () => {
 				</div>
 			</div>
 			<hr className="bg-white border-white w-full max-w-[1352px] mx-auto border mt-9 sm:mt-14" />
-			<p className="text-center flex items-center justify-center pt-5 sm:pt-9 pb-5 sm:pb-6 text-[10px] sm:text-2xl">
-				<span className="text-xs sm:text-2xl pr-2">&copy;</span>Copyright 2022. E-commerce complaints, Nigeria.
+			<p className="text-center flex items-center justify-center pt-5 sm:pt-9 pb-5 sm:pb-6 text-[10px] sm:text-base">
+				<span className="text-xs sm:text-base pr-2">&copy;</span>Copyright 2022. E-commerce complaints, Nigeria.
 			</p>
 		</div>
 	);
