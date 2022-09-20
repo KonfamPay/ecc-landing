@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export const TiredOfGettingScammed = () => {
+	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
 	const [contactFormData, setContactFormData] = useState({
 		email: "",
 	});
@@ -28,7 +29,8 @@ export const TiredOfGettingScammed = () => {
 					setContactFormData({
 						email: "",
 					});
-					window.alert("Message sent!");
+					// window.alert("Message sent!");
+					setIsModalShowing(true);
 				}
 			} catch (error) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
@@ -107,6 +109,7 @@ export const TiredOfGettingScammed = () => {
 					/>
 				</div>
 			</div>
+			{isModalSHowing && <ThankYou setIsModalShowing={() => setIsModalShowing(!isModalSHowing)} />}
 		</>
 	);
 };
