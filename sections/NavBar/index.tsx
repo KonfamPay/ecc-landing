@@ -8,7 +8,7 @@ const NavBar = () => {
 		animate: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.22 } },
 	};
 	return (
-		<nav className="bg-clearblue flex px-[20px] lg:px-[100px] justify-between items-center py-[20px] fixed top-0 left-0 right-0">
+		<nav className="bg-clearblue flex px-[20px] lg:px-[100px] justify-between items-center py-[20px] fixed top-0 left-0 right-0 z-20">
 			<img
 				className="w-[42px] z-50 lg:w-[65px]"
 				src="/assets/Images/eccLogo.svg"
@@ -19,7 +19,7 @@ const NavBar = () => {
 				<p className="">Contact us</p>
 			</div>
 			<div className="flex md:block gap-x-[18px] items-center">
-				<button className="h-[30px] lg:h-[60px] sm:h-[40px] w-[97px] sm:w-[120px] lg:w-[166px] font-semibold bg-eccblue text-[12px] sm:text-[15px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] relative active:translate-y-[2px] lg:active:translate-y-[5px] active:shadow-md transition-all">Join Waitlist</button>
+				<button className="h-[30px] lg:h-[60px] sm:h-[40px] w-[97px] sm:w-[120px] lg:w-[166px] font-semibold bg-eccblue text-[12px] sm:text-[15px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] relative active:translate-y-[2px] lg:active:translate-y-[5px] active:shadow-md transition-all text-white">Join Waitlist</button>
 				<div
 					onClick={() => setMobileNavShowing(true)}
 					className="block md:hidden active:scale-90 transition-[200ms]"
@@ -68,7 +68,7 @@ const NavBar = () => {
 								exit={{ opacity: 0 }}
 								whileTap={{ scale: 0.95 }}
 								animate={{ opacity: 1, y: 0, transition: { delay: 0.25, duration: 0.22 } }}
-								className="font-bold text-[14.67px] w-[142px] h-[44px] bg-eccblue rounded-[7.24px] "
+								className="font-bold text-[14.67px] w-[142px] h-[44px] bg-eccblue rounded-[7.24px] text-white"
 							>
 								Join Waitlist
 							</motion.button>
