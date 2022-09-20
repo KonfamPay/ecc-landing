@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const NavBar = () => {
+export const NavBar = () => {
 	const [mobileNavShowing, setMobileNavShowing] = useState(false);
 	const navItemVariants = {
 		initial: { opacity: 0, y: 30 },
@@ -89,4 +89,3 @@ const NavBar = () => {
 		</nav>
 	);
 };
-export default NavBar;
