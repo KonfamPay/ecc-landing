@@ -5,7 +5,7 @@ import NavBar from "../sections/NavBar";
 
 const Home: NextPage = () => {
 	return (
-		<div>
+		<div className="pt-[70px] sm:pt-[80px] lg:pt-[100px]">
 			<NavBar />
 		</div>
 	);
