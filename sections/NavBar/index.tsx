@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const NavBar = () => {
+export const NavBar = () => {
 	const [mobileNavShowing, setMobileNavShowing] = useState(false);
 	const navItemVariants = {
 		initial: { opacity: 0, y: 30 },
 		animate: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.22 } },
 	};
 	return (
-		<nav className="bg-clearblue flex px-[20px] lg:px-[100px] justify-between items-center py-[20px] fixed top-0 left-0 right-0">
+		<nav className="bg-clearblue flex px-[20px] lg:px-[100px] justify-between items-center py-[20px] fixed z-30 top-0 left-0 right-0">
 			<img
 				className="w-[42px] z-50 lg:w-[65px]"
 				src="/assets/Images/eccLogo.svg"
@@ -89,4 +89,3 @@ const NavBar = () => {
 		</nav>
 	);
 };
-export default NavBar;
