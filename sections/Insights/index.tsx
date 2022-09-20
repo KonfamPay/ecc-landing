@@ -1,6 +1,6 @@
 import Box from "../../Components/InsightBoxes";
 
-const Insights: React.FC = () => {
+export const Insights: React.FC = () => {
 	return (
 		<div className="mt-[100px]">
 			<div className="lg:block hidden">
@@ -120,5 +120,3 @@ const Insights: React.FC = () => {
 		</div>
 	);
 };
-
-export default Insights;

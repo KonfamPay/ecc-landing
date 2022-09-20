@@ -1,4 +1,4 @@
-const WhatWeOffer = () => {
+export const WhatWeOffer = () => {
 	return (
 		<div>
 			<header className="flex flex-col w-full items-center">
@@ -23,7 +23,7 @@ const WhatWeOffer = () => {
 					<p className=" text-center">We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel </p>
 				</div>
 			</header>
-			<div className="lg:block hidden active:scale-90 transition-[200ms]">
+			<div className="lg:block hidden active:scale-90 transition-[200ms] text-black">
 				<main className="flex flex-col w-[800px] mx-auto mt-[100px] ">
 					<div className="w-full flex justify-end mb-4">
 						<div className="flex flex-col items-center ">
@@ -180,5 +180,3 @@ const WhatWeOffer = () => {
 		</div>
 	);
 };
-
-export default WhatWeOffer;

@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Insights from "../sections/Insights";
-import NavBar from "../sections/NavBar";
-import TiredOfGettingScammed from "../sections/TiredOfGettingScammed";
-import WhatWeOffer from "../sections/WhatWeOffer";
+import { Footer, Insights, NavBar, TiredOfGettingScammed, WhatWeOffer } from "../sections";
 
 const Home: NextPage = () => {
 	return (
@@ -13,6 +10,7 @@ const Home: NextPage = () => {
 			<WhatWeOffer />
 			<Insights />
 			<TiredOfGettingScammed />
+			<Footer />
 		</div>
 	);
 };
