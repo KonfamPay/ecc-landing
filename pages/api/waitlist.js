@@ -39,17 +39,7 @@ export default async function handler(req, res) {
 		`,
 	};
 
-	const addTo = () => {
-		db.collection("waitlist")
-			.insertOne(email)
-			.then((result) => {
-				res.status(201).json(result);
-			})
-			.catch((err) => res.status(500).json({ error: "Could not create a new document" }));
-	};
-
 	try {
-		addTo();
 		// Send email
 		await transporter.sendMail(mailOptions, (err, info) => {
 			if (err) {

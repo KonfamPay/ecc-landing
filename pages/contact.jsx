@@ -15,7 +15,7 @@ const Contact = () => {
 	const handleContactFormSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch("/api/waitlist", {
+			const response = await fetch("http://127.0.0.1:3001/waitlist", {
 				method: "POST",
 				headers: {
 					Accept: "application/json, text/plain, */*",
@@ -24,7 +24,7 @@ const Contact = () => {
 				body: JSON.stringify(contactFormData),
 			});
 
-			if (response.status === 200) {
+			if (response.status === 201) {
 				setFormState({ submitted: true, success: true });
 				setContactFormData({
 					email: "",
