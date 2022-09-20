@@ -1,7 +1,7 @@
 const WhatWeOffer = () => {
 	return (
 		<div>
-			<header className="flex flex-col w-screen items-center">
+			<header className="flex flex-col w-full items-center">
 				<div className="flex flex-row w-auto justify-between items-center">
 					<img
 						className="lg:w-[40px] lg:h-[38px] w-[15px] h-[15px]"
@@ -24,7 +24,7 @@ const WhatWeOffer = () => {
 				</div>
 			</header>
 			<div className="lg:block hidden active:scale-90 transition-[200ms]">
-				<main className="flex flex-col w-[60vw] mx-auto mt-[100px] ">
+				<main className="flex flex-col w-[800px] mx-auto mt-[100px] ">
 					<div className="w-full flex justify-end mb-4">
 						<div className="flex flex-col items-center ">
 							<div>
@@ -42,7 +42,7 @@ const WhatWeOffer = () => {
 							</div>
 						</div>
 
-						<div className="text-justify w-[40%] ml-12">
+						<div className="text-justify w-[40%] ml-12 mr-1">
 							<p className="text-[18px] font-semibold">Easy Complaint Filing and Resolution</p>
 							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
 						</div>
@@ -86,7 +86,7 @@ const WhatWeOffer = () => {
 								/>
 							</div>
 						</div>
-						<div className="text-justify w-[40%] ml-12">
+						<div className="text-justify w-[40%] ml-12 mr-1">
 							<p className="text-[18px] font-semibold">Write a complaint letter</p>
 							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
 						</div>
