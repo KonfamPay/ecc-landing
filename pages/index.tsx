@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Insights from "../sections/Insights";
 import NavBar from "../sections/NavBar";
+import TiredOfGettingScammed from "../sections/TiredOfGettingScammed";
 import WhatWeOffer from "../sections/WhatWeOffer";
 
 const Home: NextPage = () => {
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
 			<NavBar />
 			<WhatWeOffer />
 			<Insights />
+      <TiredOfGettingScammed />
 		</div>
 	);
 };
