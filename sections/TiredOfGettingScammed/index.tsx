@@ -44,7 +44,7 @@ export const TiredOfGettingScammed = () => {
 	};
 	return (
 		<>
-			<div className="flex px-[0px] lg:px-[100px] justify-between items-center py-[20px] lg:pt-[235px]">
+			<div className="flex px-[0px] lg:px-[100px] justify-between items-center py-[20px] lg:pt-[235px] my-[100px] lg:mt-0">
 				<div className="bg-[#F1F7FE] px-[] lg:px-[32px] lg:rounded-[20px] pt-[74px] pb-[36px] lg:py-[82px] w-full relative">
 					<div className="lg:w-[700px] flex flex-col gap-[16px]">
 						<h1 className="text-[#0B63C5] text-[18px] text-center lg:text-left lg:text-[30px] px-[30px] lg:px-[0] font-medium">Tired of Getting Scammed by Online Vendors and Complanies?</h1>
