@@ -1,7 +1,23 @@
-import { useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const NavBar = () => {
+interface NavBarProps {
+	whatWeOfferRef: RefObject<HTMLDivElement>;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef }) => {
+	const [scrollReport, setScrollReport] = useState(0);
+	useEffect(() => {
+		window?.addEventListener("scroll", () => {
+			setScrollReport(window.pageYOffset);
+			console.log(window.pageYOffset);
+		});
+		return () =>
+			window?.removeEventListener("scroll", () => {
+				setScrollReport(window.pageYOffset);
+			});
+	}),
+		[];
 	const [mobileNavShowing, setMobileNavShowing] = useState(false);
 	const navItemVariants = {
 		initial: { opacity: 0, y: 30 },
@@ -14,9 +30,25 @@ const NavBar = () => {
 				src="/assets/Images/eccLogo.svg"
 			/>
 			<div className="hidden md:flex gap-x-[67px] text-black text-[18px]">
-				<p className="text-eccblue">Home</p>
-				<p className="">What we offer</p>
-				<p className="">Contact us</p>
+				<p
+					style={{ color: scrollReport < 874 ? "#0B63C5" : "black" }}
+					className="text-eccblue"
+				>
+					Home
+				</p>
+				<p
+					style={{ color: scrollReport >= 874 ? "#0B63C5" : "black" }}
+					onClick={() => whatWeOfferRef.current?.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest" })}
+					className="cursor-pointer"
+				>
+					What we offer
+				</p>
+				<p
+					className="cursor-pointer"
+					style={{ color: scrollReport >= 874 ? "#0B63C5" : "black" }}
+				>
+					Contact us
+				</p>
 			</div>
 			<div className="flex md:block gap-x-[18px] items-center">
 				<button className="h-[30px] lg:h-[60px] sm:h-[40px] w-[97px] sm:w-[120px] lg:w-[166px] font-semibold bg-eccblue text-[12px] sm:text-[15px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] relative active:translate-y-[2px] lg:active:translate-y-[5px] active:shadow-md transition-all text-white">Join Waitlist</button>
@@ -40,16 +72,26 @@ const NavBar = () => {
 							<div className="flex flex-col items-center text-[22px] text-black gap-y-[50px]">
 								<motion.p
 									variants={navItemVariants}
+									style={{ color: scrollReport < 347 ? "#0B63C5" : "black" }}
 									initial={{ opacity: 0, y: 50 }}
 									exit={{ opacity: 0 }}
 									animate={{ opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.22 } }}
+									onClick={() => {
+										setMobileNavShowing(false);
+										window.scrollTo({ top: 0, behavior: "smooth" });
+									}}
 								>
 									Home
 								</motion.p>
 								<motion.p
 									variants={navItemVariants}
 									initial={{ opacity: 0, y: 50 }}
+									style={{ color: scrollReport >= 347 ? "#0B63C5" : "black" }}
 									exit={{ opacity: 0 }}
+									onClick={() => {
+										setMobileNavShowing(false);
+										whatWeOfferRef.current?.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest" });
+									}}
 									animate={{ opacity: 1, y: 0, transition: { delay: 0.15, duration: 0.22 } }}
 								>
 									What we offer
@@ -77,7 +119,9 @@ const NavBar = () => {
 								initial={{ opacity: 0, scale: 0.6 }}
 								exit={{ opacity: 0, scale: 0.6, transition: { duration: 0.25, delay: 0.4 } }}
 								whileTap={{ scale: 0.95 }}
-								onClick={() => setMobileNavShowing(false)}
+								onClick={() => {
+									setMobileNavShowing(false);
+								}}
 								className="relative -bottom-[70px] w-[48px] h-[48px] bg-eccblue rounded-full flex items-center justify-center"
 							>
 								<img src="/assets/Images/closeIcon.svg" />
