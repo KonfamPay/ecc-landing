@@ -3,14 +3,14 @@ import nodemailer from "nodemailer";
 import { connectToDb, getDb } from "./db";
 
 export default async function handler(req, res) {
+	const { email } = req.body;
 	let db;
 	connectToDb((err) => {
+		console.log(1);
 		if (!err) {
 			db = getDb();
-			console.log(db);
 		}
 	});
-	const { email } = req.body;
 
 	if (!email) {
 		return res.status(400).json({ error: "All fields are required" });
@@ -39,20 +39,15 @@ export default async function handler(req, res) {
 		`,
 	};
 
-	const addTo = async () => {
-		console.log(db);
-		db.collection("waitlist")
-			.insertOne(email)
-			.then((result) => {
-				res.status(201).json(result);
-			})
-			.catch((err) => res.status(500).json({ error: "Could not create a new document" }));
-	};
-
 	try {
-		addTo();
 		// Send email
 		await transporter.sendMail(mailOptions, (err, info) => {
+			db.collection("waitlistCollection")
+				.insertOne(email)
+				.then((result) => {
+					res.status(200).json(result);
+				})
+				.catch((err) => res.status(500).json({ error: "Could not create a new document" }));
 			if (err) {
 				return res.status(500).json({ error: err.message });
 			}
@@ -62,3 +57,32 @@ export default async function handler(req, res) {
 		return res.status(500).json({ error: error.message });
 	}
 }
+
+// import express from "express";
+// import { ObjectId } from "mongodb";
+// import { connectToDb, getDb } from "./db";
+
+// const app = express();
+// app.use(express.json());
+
+// //db connection
+// let db;
+// connectToDb((err) => {
+// 	if (!err) {
+// 		app.listen(3000, () => {
+// 			console.log("App listening on port 3000");
+// 		});
+// 		db = getDb();
+// 	}
+// });
+
+// app.post("/wait", (req, res) => {
+// 	const book = req.body;
+
+// 	db.collection("books")
+// 		.insertOne(book)
+// 		.then((result) => {
+// 			res.status(201).json(result);
+// 		})
+// 		.catch((err) => res.status(500).json({ error: "Could not create a new document" }));
+// });
