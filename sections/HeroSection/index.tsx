@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
+import { ThankYou } from "../";
 
 const HeroSection = () => {
+	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
 	const [contactFormData, setContactFormData] = useState({
 		email: "",
 	});
@@ -28,7 +30,8 @@ const HeroSection = () => {
 					setContactFormData({
 						email: "",
 					});
-					window.alert("Message sent!");
+					// window.alert("Message sent!");
+					setIsModalShowing(true);
 				}
 			} catch (error) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
@@ -131,6 +134,7 @@ const HeroSection = () => {
 					</figure>
 				</figure>
 			</div>
+			{isModalSHowing && <ThankYou setIsModalShowing={() => setIsModalShowing(!isModalSHowing)} />}
 		</>
 	);
 };
