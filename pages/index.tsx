@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 			<NavBar />
 			<WhatWeOffer />
 			<Insights />
-      <TiredOfGettingScammed />
+			<TiredOfGettingScammed />
 		</div>
 	);
 };
