@@ -107,7 +107,7 @@ export const Insights: React.FC = () => {
                  text-white px-3 mt-6"
 				>
 					<p className="text-center">We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
-					<button className="bg-white w-auto items-center p-2 rounded-md text-eccblue flex flex-row mt-5 text-[14px] ">
+					<button className="bg-white w-auto items-center p-2 rounded-md text-eccblue flex mb-8 flex-row mt-5 text-[14px] ">
 						<img
 							className="w-[14px] h-[14px]"
 							src="./assets/Images/downloadIcon.svg"
