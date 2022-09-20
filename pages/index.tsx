@@ -8,11 +8,11 @@ import WhatWeOffer from "../sections/WhatWeOffer";
 
 const Home: NextPage = () => {
 	return (
-		<div>
+		<div className="pt-[70px] sm:pt-[80px] lg:pt-[100px]">
 			<NavBar />
 			<WhatWeOffer />
 			<Insights />
-      <TiredOfGettingScammed />
+			<TiredOfGettingScammed />
 		</div>
 	);
 };
