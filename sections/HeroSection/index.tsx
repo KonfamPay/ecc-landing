@@ -71,7 +71,8 @@ export const HeroSection = () => {
 					/>
 				</h1>
 				<p className=" text-[14px] md:text-[17px] lg:text-[20px] max-w-[377px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1027px] text-center mx-auto mt-[14px] px-[15px] md:mt-[15px] text-[#434343]">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel vulputate et pharetra ornare. Pellentesque orci amet in eget est enim vivamus gravida nunc. Pharetra pellentesque.
+					E-commerce Complaint is a platform for consumers to resolve their disputes with brands. It serves as an extension of the typical complaint redressal process, where consumers can easily file their complaints and get them resolved by the concerned brand or company. We make use of technology to add accountability to grievances, using Social Media, SMS, Email and Phone calls as a means of
+					communication between parties.
 				</p>
 				<div className="mt-[36px] justify-center">
 					<form onSubmit={handleContactFormSubmit}>

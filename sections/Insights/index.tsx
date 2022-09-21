@@ -23,17 +23,17 @@ export const Insights: React.FC = () => {
 						<div className="flex flex-row relative bottom-5 ">
 							<Box
 								type="big"
-								item1="Total Cases Identified"
-								item2={18395}
+								item1="Total Complaints"
+								item2={43764}
 								item3="Confirmed Causes"
-								item4={16960}
+								item4={38200}
 							/>
 							<Box
 								type="big"
-								item1="False Cases"
-								item2={1435}
-								item3="Recurring from the same Scam Accounts"
-								item4={4532}
+								item1="Scam Cases"
+								item2={30605}
+								item3="Unsatisfied Transactions"
+								item4={7595}
 							/>
 						</div>
 						<div className="flex flex-col justify-center items-center w-[220px] h-[200px] bg-white border-[3px] top-7  relative border-solid border-eccblue rounded-[14px]">
@@ -49,7 +49,7 @@ export const Insights: React.FC = () => {
 									<CountUp
 										duration={2}
 										start={0}
-										end={357634625}
+										end={903291695}
 									></CountUp>
 								</span>
 							</div>
@@ -81,17 +81,17 @@ export const Insights: React.FC = () => {
 					<div className="flex flex-row w-full mb-6 mt-8">
 						<Box
 							type="small"
-							item1="Total Cases Identified"
-							item2={18395}
+							item1="Total Complaints"
+							item2={43764}
 							item3="Confirmed Causes"
-							item4={16960}
+							item4={38200}
 						/>
 						<Box
 							type="small"
-							item1="False Cases"
-							item2={1435}
-							item3="Recurring from the same Scam Accounts"
-							item4={4532}
+							item1="Scam Cases"
+							item2={30605}
+							item3="Unsatisfied Transactions"
+							item4={7595}
 						/>
 					</div>
 					<div className="flex flex-col justify-center items-center w-[170px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]">
@@ -106,7 +106,7 @@ export const Insights: React.FC = () => {
 								<CountUp
 									duration={2}
 									start={0}
-									end={357634625}
+									end={903291695}
 								></CountUp>
 							</span>
 						</div>
@@ -122,16 +122,13 @@ export const Insights: React.FC = () => {
 									duration={2}
 									start={0}
 									end={450000}
-								></CountUp>{" "}
+								></CountUp>
 							</span>
 						</div>
 					</div>
 				</div>
 
-				<div
-					className="flex flex-col items-center w-[80%]
-                 text-white px-3 mt-6"
-				>
+				<div className="flex flex-col items-center w-[80%] text-white px-3 mt-6">
 					<p className="text-center">We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
 					<button className="bg-white w-auto items-center p-2 rounded-md text-eccblue flex mb-8 flex-row mt-5 text-[14px] ">
 						<img

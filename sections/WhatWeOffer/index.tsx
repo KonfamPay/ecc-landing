@@ -29,7 +29,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 					/>
 				</div>
 				<div className="lg:w-[600px] w-[80%] mt-4">
-					<p className=" text-center">We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel </p>
+					<p className="text-center">We are the voice of consumers. We offer a healthy shopping experience</p>
 				</div>
 			</header>
 			<div className="lg:block hidden active:scale-90 transition-[200ms] text-black">
@@ -52,15 +52,15 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						</div>
 
 						<div className="text-justify w-[40%] ml-12 mr-1">
-							<p className="text-[18px] font-semibold">Easy Complaint Filing and Resolution</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
+							<p className="text-[18px] font-semibold">Easy complaint filing and Resolution</p>
+							<p>We have made it easier to submit complaints and receive a resolution</p>
 						</div>
 					</div>
 
 					<div className="w-full flex  flex-row justify-start mb-4">
 						<div className="text-justify w-[40%] mr-12 ">
-							<p className="text-[18px] font-semibold">Quick search through thousands of Scam Records</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
+							<p className="text-[18px] font-semibold">Quick search</p>
+							<p>Scams are everywhere. But, with our help, you can quickly and easily find all of the scams that we have already received complaints about. </p>
 						</div>
 						<div className="flex flex-col items-center ">
 							<div>
@@ -97,14 +97,14 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						</div>
 						<div className="text-justify w-[40%] ml-12 mr-1">
 							<p className="text-[18px] font-semibold">Write a complaint letter</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
+							<p>An easy to use and editable tool that allows you to express your grievances to brands/Companies.</p>
 						</div>
 					</div>
 
 					<div className="w-full flex  flex-row justify-start mb-4">
 						<div className="text-justify w-[40%] mr-12">
-							<p className="text-[18px] font-semibold">{`Use an escrow service (Konfampay)`}</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
+							<p className="text-[18px] font-semibold">{`Secure your Money (Konfampay)`}</p>
+							<p>Buy things online without making payment to the vendor.</p>
 						</div>
 						<div>
 							<div>
@@ -130,7 +130,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						/>
 						<div className="text-left my-4 text-[14px]">
 							<p className=" font-semibold text-[16px]  mb-2">Easy Complaint Filing and Resolution</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel</p>
+							<p>We have made it easier to submit complaints and receive a resolution</p>
 						</div>
 						<img
 							className="h-[52px] ml-4 "
@@ -146,8 +146,8 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 							alt=""
 						/>
 						<div className="text-left my-4 text-[14px]">
-							<p className=" font-semibold text-[16px]  mb-2">Quick search through thousands of Scam Records</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel</p>
+							<p className=" font-semibold text-[16px]  mb-2">Quick search</p>
+							<p>Scams are everywhere. But, with our help, you can quickly and easily find all of the scams that we have already received complaints about.</p>
 						</div>
 						<img
 							className="h-[52px] ml-4 "
@@ -164,7 +164,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						/>
 						<div className="text-left my-4 text-[14px]">
 							<p className=" font-semibold text-[16px]  mb-2">Write a complaint letter</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel</p>
+							<p>An easy to use and editable tool that allows you to express your grievances to brands/Companies.</p>
 						</div>
 						<img
 							className="h-[52px] ml-4 "
@@ -180,8 +180,8 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 							alt=""
 						/>
 						<div className="text-left my-4 text-[14px]">
-							<p className=" font-semibold text-[16px] mb-2">{`Use an escrow service (Konfampay)`}</p>
-							<p>We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel</p>
+							<p className=" font-semibold text-[16px] mb-2">{`Secure your Money (Konfampay)`}</p>
+							<p>Buy things online without making payment to the vendor.</p>
 						</div>
 					</div>
 				</main>
