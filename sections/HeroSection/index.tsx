@@ -1,4 +1,4 @@
-const HeroSection = () => {
+export const HeroSection = () => {
 	return (
 		<>
 			<section className="md:pt-[80px] bg-clearblue relative w-full">
@@ -77,4 +77,3 @@ const HeroSection = () => {
 		</>
 	);
 };
-export default HeroSection;
