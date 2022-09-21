@@ -1,7 +1,7 @@
 import { SetStateAction, useState } from "react";
 import { ThankYou } from "../";
 
-const HeroSection = () => {
+export const HeroSection = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
 	const [contactFormData, setContactFormData] = useState({
 		email: "",
@@ -138,4 +138,3 @@ const HeroSection = () => {
 		</>
 	);
 };
-export default HeroSection;
