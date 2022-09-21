@@ -3,9 +3,10 @@ import { AnimatePresence, motion } from "framer-motion";
 
 interface NavBarProps {
 	whatWeOfferRef: RefObject<HTMLDivElement>;
+	contactUsRef: RefObject<HTMLDivElement>;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef }) => {
+export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef }) => {
 	const [scrollReport, setScrollReport] = useState(0);
 	useEffect(() => {
 		window?.addEventListener("scroll", () => {
@@ -31,13 +32,14 @@ const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef }) => {
 			/>
 			<div className="hidden md:flex gap-x-[67px] text-black text-[18px]">
 				<p
-					style={{ color: scrollReport < 874 ? "#0B63C5" : "black" }}
-					className="text-eccblue"
+					style={{ color: scrollReport < 600 ? "#0B63C5" : "black" }}
+					className="text-eccblue cursor-pointer"
+					onClick={() => window?.scrollTo({ top: 0, behavior: "smooth" })}
 				>
 					Home
 				</p>
 				<p
-					style={{ color: scrollReport >= 874 ? "#0B63C5" : "black" }}
+					style={{ color: scrollReport >= 600 && scrollReport < 2500 ? "#0B63C5" : "black" }}
 					onClick={() => whatWeOfferRef.current?.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest" })}
 					className="cursor-pointer"
 				>
@@ -45,7 +47,8 @@ const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef }) => {
 				</p>
 				<p
 					className="cursor-pointer"
-					style={{ color: scrollReport >= 874 ? "#0B63C5" : "black" }}
+					style={{ color: scrollReport >= 2500 ? "#0B63C5" : "black" }}
+					onClick={() => contactUsRef.current?.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest" })}
 				>
 					Contact us
 				</p>
@@ -86,7 +89,7 @@ const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef }) => {
 								<motion.p
 									variants={navItemVariants}
 									initial={{ opacity: 0, y: 50 }}
-									style={{ color: scrollReport >= 347 ? "#0B63C5" : "black" }}
+									style={{ color: scrollReport >= 347 && scrollReport < 1800 ? "#0B63C5" : "black" }}
 									exit={{ opacity: 0 }}
 									onClick={() => {
 										setMobileNavShowing(false);
@@ -100,7 +103,12 @@ const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef }) => {
 									variants={navItemVariants}
 									initial={{ opacity: 0, y: 50 }}
 									exit={{ opacity: 0 }}
+									style={{ color: scrollReport >= 1800 ? "#0B63C5" : "black" }}
 									animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.22 } }}
+									onClick={() => {
+										setMobileNavShowing(false);
+										contactUsRef.current?.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest" });
+									}}
 								>
 									Contact us
 								</motion.p>
@@ -133,4 +141,3 @@ const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef }) => {
 		</nav>
 	);
 };
-export default NavBar;
