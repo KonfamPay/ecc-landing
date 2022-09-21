@@ -20,7 +20,7 @@ const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type }) => {
 					<p className="font-semibold text-[16px]">{item1}</p>
 					<p className="font-semibold text-[20.4px] text-eccblue">
 						<CountUp
-							duration={5}
+							duration={2}
 							start={0}
 							end={item2}
 						></CountUp>
@@ -28,7 +28,7 @@ const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type }) => {
 					<p className="font-semibold text-[16px] text-center">{item3}</p>
 					<p className="font-semibold text-[20.4px] text-eccblue">
 						<CountUp
-							duration={5}
+							duration={2}
 							start={0}
 							end={item4}
 						></CountUp>
@@ -42,7 +42,7 @@ const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type }) => {
 					<p className="font-semibold text-[12px]">{item1}</p>
 					<p className="font-semibold text-[14.4px] text-eccblue">
 						<CountUp
-							duration={50}
+							duration={2}
 							start={0}
 							end={item2}
 						></CountUp>
@@ -50,7 +50,7 @@ const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type }) => {
 					<p className="font-semibold text-[12px] w-[80%] text-center">{item3}</p>
 					<p className="font-semibold text-[14.4px] text-eccblue">
 						<CountUp
-							duration={50}
+							duration={2}
 							start={0}
 							end={item4}
 						></CountUp>

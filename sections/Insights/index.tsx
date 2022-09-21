@@ -47,7 +47,7 @@ export const Insights: React.FC = () => {
 								<span>
 									{" "}
 									<CountUp
-										duration={5}
+										duration={2}
 										start={0}
 										end={357634625}
 									></CountUp>
@@ -62,7 +62,7 @@ export const Insights: React.FC = () => {
 								/>{" "}
 								<span>
 									<CountUp
-										duration={5}
+										duration={2}
 										start={0}
 										end={450000}
 									></CountUp>
@@ -104,7 +104,7 @@ export const Insights: React.FC = () => {
 							/>{" "}
 							<span>
 								<CountUp
-									duration={50}
+									duration={2}
 									start={0}
 									end={357634625}
 								></CountUp>
@@ -119,7 +119,7 @@ export const Insights: React.FC = () => {
 							/>{" "}
 							<span>
 								<CountUp
-									duration={50}
+									duration={2}
 									start={0}
 									end={450000}
 								></CountUp>{" "}
