@@ -1,7 +1,7 @@
 import { SetStateAction, useState } from "react";
 import { ThankYou } from "../";
 
-const HeroSection = () => {
+export const HeroSection = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
 	const [contactFormData, setContactFormData] = useState({
 		email: "",
@@ -33,7 +33,7 @@ const HeroSection = () => {
 					// window.alert("Message sent!");
 					setIsModalShowing(true);
 				}
-			} catch (error) {
+			} catch (error: any) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
 				setFormState({
 					submitted: true,
@@ -138,4 +138,3 @@ const HeroSection = () => {
 		</>
 	);
 };
-export default HeroSection;
