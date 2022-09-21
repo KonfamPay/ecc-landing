@@ -16,7 +16,7 @@ export const HeroSection = () => {
 		e.preventDefault();
 		if (contactFormData.email.length > 10) {
 			try {
-				const response = await fetch("http://127.0.0.1:3001/waitlist", {
+				const response = await fetch("https://eccwaitlistbackend.herokuapp.com/waitlist", {
 					method: "POST",
 					headers: {
 						Accept: "application/json, text/plain, */*",
