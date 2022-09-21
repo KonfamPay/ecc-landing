@@ -1,7 +1,16 @@
-export const WhatWeOffer = () => {
+import { RefObject } from "react";
+
+interface WhatWeOfferProps {
+	sectionRef: RefObject<HTMLDivElement>;
+}
+
+export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 	return (
 		<div>
-			<header className="flex flex-col w-full items-center">
+			<header
+				ref={sectionRef}
+				className="flex flex-col w-full items-center"
+			>
 				<div className="flex flex-row w-auto justify-between items-center">
 					<img
 						className="lg:w-[40px] lg:h-[38px] w-[15px] h-[15px]"
