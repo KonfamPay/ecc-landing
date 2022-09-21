@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from "react";
-import { ThankYou } from "../";
+import { ThankYou } from "..";
 
 export const HeroSection = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);

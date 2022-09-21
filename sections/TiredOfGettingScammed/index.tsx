@@ -33,7 +33,7 @@ export const TiredOfGettingScammed = () => {
 					// window.alert("Message sent!");
 					setIsModalShowing(true);
 				}
-			} catch (error) {
+			} catch (error: any) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
 				setFormState({
 					submitted: true,

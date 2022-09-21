@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { RefObject } from "react";
 
 interface WhatWeOfferProps {
