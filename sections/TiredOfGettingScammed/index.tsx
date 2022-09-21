@@ -22,7 +22,7 @@ export const TiredOfGettingScammed = () => {
 						Accept: "application/json, text/plain, */*",
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify(contactFormData),
+					body: JSON.stringify(contactFormData).trim(),
 				});
 
 				if (response.status === 201) {
