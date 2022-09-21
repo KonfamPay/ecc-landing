@@ -1,4 +1,50 @@
+import { SetStateAction, useState } from "react";
+import { ThankYou } from "../";
+
 export const HeroSection = () => {
+	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	const [contactFormData, setContactFormData] = useState({
+		email: "",
+	});
+	const [formState, setFormState] = useState<any>({
+		submitted: false,
+		success: false,
+		message: null,
+	});
+
+	const handleContactFormSubmit = async (e: any) => {
+		e.preventDefault();
+		if (contactFormData.email.length > 10) {
+			try {
+				const response = await fetch("http://127.0.0.1:3001/waitlist", {
+					method: "POST",
+					headers: {
+						Accept: "application/json, text/plain, */*",
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(contactFormData),
+				});
+
+				if (response.status === 201) {
+					setFormState({ submitted: true, success: true });
+					setContactFormData({
+						email: "",
+					});
+					// window.alert("Message sent!");
+					setIsModalShowing(true);
+				}
+			} catch (error) {
+				window.alert("Error Sending Message 😢. Try again 🤕.");
+				setFormState({
+					submitted: true,
+					success: false,
+					message: error.message,
+				});
+			}
+		} else {
+			window.alert("Email Address should be longer than 10 characters");
+		}
+	};
 	return (
 		<>
 			<section className="md:pt-[80px] bg-clearblue relative w-full">
@@ -28,14 +74,28 @@ export const HeroSection = () => {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel vulputate et pharetra ornare. Pellentesque orci amet in eget est enim vivamus gravida nunc. Pharetra pellentesque.
 				</p>
 				<div className="mt-[36px] justify-center">
-					<div className="flex w-full max-w-[329px] lg:max-w-[713px] gap-x-[7px] lg:gap-x-[21px]  mx-auto pb-[100px] md:pb-[140px] lg:pb-[178px]">
-						<input
-							type="text"
-							placeholder="Enter email address here"
-							className="focus:outline-0 rounded-[5px] lg:rounded-[12px] placeholder:text-[12px] text-[12px] lg:placeholder:text-[18px] lg:text-[18px] pl-[10px] lg:pl-[15px] lg:py-[17px] w-full max-w-[225px] md:max-w-[526px]"
-						/>
-						<button className="w-[97px] md:w-[160px] lg:w-[160px] h-[30px] lg:h-[60px] font-semibold text-white text-[12px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] bg-eccblue shadow-[0px_2px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-md transition-all lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] lg:active:translate-y-[5px]">Join Waitlist</button>
-					</div>
+					<form onSubmit={handleContactFormSubmit}>
+						<div className="flex w-full max-w-[329px] lg:max-w-[713px] gap-x-[7px] lg:gap-x-[21px]  mx-auto pb-[100px] md:pb-[140px] lg:pb-[178px]">
+							<input
+								type="email"
+								placeholder="Enter email address here"
+								className="focus:outline-0 rounded-[5px] lg:rounded-[12px] placeholder:text-[12px] text-[12px] lg:placeholder:text-[18px] lg:text-[18px] pl-[10px] lg:pl-[15px] lg:py-[17px] w-full max-w-[225px] md:max-w-[526px]"
+								value={contactFormData.email}
+								onChange={(e) =>
+									setContactFormData({
+										...contactFormData,
+										email: e.target.value,
+									})
+								}
+							/>
+							<input
+								type="submit"
+								id="submit"
+								className="w-[97px] md:w-[160px] lg:w-[160px] h-[30px] lg:h-[60px] font-semibold text-white text-[12px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] bg-eccblue shadow-[0px_2px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-md transition-all lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] lg:active:translate-y-[5px] cursor-pointer"
+								value="Join Waitlist"
+							/>
+						</div>
+					</form>
 				</div>
 			</section>
 			<div className="max-h-[150px] md:max-h-none relative flex justify-center mb-[31px] sm:mb-[105px] md:mb-[230px] lg:mb-[350px]">
@@ -74,6 +134,7 @@ export const HeroSection = () => {
 					</figure>
 				</figure>
 			</div>
+			{isModalSHowing && <ThankYou setIsModalShowing={() => setIsModalShowing(!isModalSHowing)} />}
 		</>
 	);
 };

@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useRef } from "react";
 import { HeroSection, Footer, Insights, NavBar, TiredOfGettingScammed, WhatWeOffer } from "../sections";
 
+
 const Home: NextPage = () => {
 	const whatWeOfferRef = useRef(null);
 	const contactUsRef = useRef(null);
