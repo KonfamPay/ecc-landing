@@ -51,7 +51,7 @@ export const TiredOfGettingScammed = () => {
 				<div className="bg-[#F1F7FE] px-[] lg:px-[32px] lg:rounded-[20px] pt-[74px] pb-[36px] lg:py-[82px] w-full relative">
 					<div className="lg:w-[700px] flex flex-col gap-[16px]">
 						<h1 className="text-[#0B63C5] text-[18px] text-center lg:text-left lg:text-[30px] px-[30px] lg:px-[0] font-medium">Tired of Getting Scammed by Online Vendors and Complanies?</h1>
-						<p className="text-[#434343] text-[14px] text-center lg:text-left lg:text-[20px] px-[30px] lg:px-[0]">Join our fight against Diam eget elementum pellentesque et urna. Sign up for our waitlist to be the first person to know when we launch. </p>
+						<p className="text-[#434343] text-[14px] text-center lg:text-left lg:text-[20px] px-[30px] lg:px-[0]">Join our fight against unsatisfied services and scam cases. Sign up for our waitlist to be the first person to know when we launch. </p>
 						<form
 							className="lg:pt-[66px] px-[24px] lg:px-[unset] flex gap-[7px] w-[100%] lg:gap-[21px]"
 							onSubmit={handleContactFormSubmit}

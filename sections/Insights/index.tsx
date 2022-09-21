@@ -8,7 +8,7 @@ export const Insights: React.FC = () => {
 				<div className="flex flex-row h-[370px] bg-gradient-to-r from-[#0B63C5] to-[#073D79]">
 					<div className="w-[40%] px-[60px] flex flex-col items-center justify-center text-white">
 						<p className=" font-semibold text-[30px] ">A Quick Insight into our Complaints Statistics</p>
-						<p className="my-4">We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
+						<p className="my-4">We are the voice of Consumers. We are solely driven by the lines of thought that business is not just a transaction, but a relationship that allows both parties to benefit.</p>
 						<div className="flex w-full items-start mt-3">
 							<button className="bg-white w-auto p-2 rounded-md text-eccblue flex flex-row ">
 								<img
@@ -64,7 +64,7 @@ export const Insights: React.FC = () => {
 									<CountUp
 										duration={2}
 										start={0}
-										end={450000}
+										end={45000}
 									></CountUp>
 								</span>
 							</div>
@@ -121,7 +121,7 @@ export const Insights: React.FC = () => {
 								<CountUp
 									duration={2}
 									start={0}
-									end={450000}
+									end={45000}
 								></CountUp>
 							</span>
 						</div>
