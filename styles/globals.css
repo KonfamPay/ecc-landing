@@ -19,10 +19,3 @@ a {
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 }
-
-@media (max-width: 1024px) {
-	#insights {
-		margin-top: 100px;
-		margin-bottom: 100px;
-	}
-}
