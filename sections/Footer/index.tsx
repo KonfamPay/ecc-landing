@@ -22,8 +22,8 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 						/>
 					</div>
 				</div>
-				<p className="max-w-[739px] text-center text-sm sm:text-xl mt-8">Join our fight against Diam eget elementum pellentesque et urna. Sign up for our waitlist to be the first person to know when we launch. </p>
-				<p className="max-w-[530px] text-center text-sm sm:text-xl mt-5">Email Address: support@ecommercecomplaint.com</p>
+				<p className="max-w-[739px] text-center text-sm sm:text-xl mt-8">Join our fight against unsatisfied services and scam cases. Sign up for our waitlist to be the first person to know when we launch.</p>
+				<p className="max-w-[530px] text-center text-sm sm:text-xl mt-5">Email Address: konfampay@gmail.com</p>
 				<div className="mt-5 flex items-center justify-center space-x-5 sm:space-x-8">
 					<Link
 						href={"/"}

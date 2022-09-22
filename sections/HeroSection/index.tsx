@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from "react";
-import { ThankYou } from "../";
+import { ThankYou } from "..";
 
 export const HeroSection = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
@@ -16,13 +16,13 @@ export const HeroSection = () => {
 		e.preventDefault();
 		if (contactFormData.email.length > 10) {
 			try {
-				const response = await fetch("http://127.0.0.1:3001/waitlist", {
+				const response = await fetch("https://eccwaitlistbackend.herokuapp.com/waitlist", {
 					method: "POST",
 					headers: {
 						Accept: "application/json, text/plain, */*",
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify(contactFormData),
+					body: JSON.stringify(contactFormData).trim(),
 				});
 
 				if (response.status === 201) {
@@ -71,7 +71,8 @@ export const HeroSection = () => {
 					/>
 				</h1>
 				<p className=" text-[14px] md:text-[17px] lg:text-[20px] max-w-[377px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1027px] text-center mx-auto mt-[14px] px-[15px] md:mt-[15px] text-[#434343]">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel vulputate et pharetra ornare. Pellentesque orci amet in eget est enim vivamus gravida nunc. Pharetra pellentesque.
+					E-commerce Complaint is a platform that allows consumers to resolve disputes with brands. It functions as an extension of the traditional complaint redressal process, allowing consumers to easily file complaints and have them resolved by the relevant brand or company. We use technology to add accountability to grievances, communicating between parties via Social Media, SMS, Email, and
+					phone calls.
 				</p>
 				<div className="mt-[36px] justify-center">
 					<form onSubmit={handleContactFormSubmit}>
