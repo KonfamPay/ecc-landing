@@ -22,6 +22,7 @@ export const Insights: React.FC = () => {
 					<div className="w-[60%] flex flex-col items-center ">
 						<div className="flex flex-row relative bottom-5 ">
 							<Box
+								direction="left"
 								type="big"
 								item1="Total Complaints"
 								item2={43764}
@@ -29,6 +30,7 @@ export const Insights: React.FC = () => {
 								item4={38200}
 							/>
 							<Box
+								direction="right"
 								type="big"
 								item1="Scam Cases"
 								item2={30605}
@@ -36,7 +38,10 @@ export const Insights: React.FC = () => {
 								item4={7595}
 							/>
 						</div>
-						<div className="flex flex-col justify-center items-center w-[220px] h-[200px] bg-white border-[3px] top-7  relative border-solid border-eccblue rounded-[14px]">
+						<div
+							data-aos="fade-up"
+							className="flex flex-col justify-center items-center w-[220px] h-[200px] bg-white border-[3px] top-7  relative border-solid border-eccblue rounded-[14px]"
+						>
 							<p className="font-semibold text-[16px]">Total Amount of Report</p>
 							<div className="font-semibold text-[20.4px] flex flex-row mb-3 items-center text-eccblue">
 								<img
@@ -80,6 +85,7 @@ export const Insights: React.FC = () => {
 				<div className="flex flex-col items-center">
 					<div className="flex flex-row w-full mb-6 mt-8">
 						<Box
+							direction="left"
 							type="small"
 							item1="Total Complaints"
 							item2={43764}
@@ -87,6 +93,7 @@ export const Insights: React.FC = () => {
 							item4={38200}
 						/>
 						<Box
+							direction="right"
 							type="small"
 							item1="Scam Cases"
 							item2={30605}
@@ -94,7 +101,10 @@ export const Insights: React.FC = () => {
 							item4={7595}
 						/>
 					</div>
-					<div className="flex flex-col justify-center items-center w-[170px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]">
+					<div
+						data-aos="fade-up"
+						className="flex flex-col justify-center items-center w-[170px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]"
+					>
 						<p className="font-semibold text-[12px]">Total Amount of Report</p>
 						<div className="font-semibold text-[14.4px] flex flex-row mb-3 items-center text-eccblue">
 							<img
