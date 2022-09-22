@@ -1,10 +1,16 @@
-import React from "react";
+import React, { RefObject } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Footer = () => {
+interface FooterProps {
+	sectionRef: RefObject<HTMLDivElement>;
+}
+export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 	return (
-		<div className="bg-black text-white px-4 sm:px-11">
+		<div
+			ref={sectionRef}
+			className="bg-black text-white px-4 sm:px-11 lg:mt-[100px]"
+		>
 			<div className="flex flex-col items-center justify-center sm:font-medium  pt-14">
 				<div className="w-[51px] sm:w-[100px] h-[51px] sm:h-[100px] flex items-center justify-center bg-clearblue rounded-full">
 					<div className="w-[32.65px] sm:w-[65px] h-[11px] sm:h-[22px] relative">
@@ -16,8 +22,8 @@ export const Footer = () => {
 						/>
 					</div>
 				</div>
-				<p className="max-w-[739px] text-center text-sm sm:text-xl mt-8">Join our fight against Diam eget elementum pellentesque et urna. Sign up for our waitlist to be the first person to know when we launch. </p>
-				<p className="max-w-[530px] text-center text-sm sm:text-xl mt-5">Email Address: support@ecommercecomplaint.com</p>
+				<p className="max-w-[739px] text-center text-sm sm:text-xl mt-8">Join our fight against unsatisfied services and scam cases. Sign up for our waitlist to be the first person to know when we launch.</p>
+				<p className="max-w-[530px] text-center text-sm sm:text-xl mt-5">Email Address: konfampay@gmail.com</p>
 				<div className="mt-5 flex items-center justify-center space-x-5 sm:space-x-8">
 					<Link
 						href={"/"}
