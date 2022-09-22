@@ -7,13 +7,15 @@ interface BoxProps {
 	item3: string;
 	item4: number;
 	type: string;
+	direction: string;
 }
 
-const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type }) => {
+const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type, direction }) => {
 	return (
 		<div>
 			{type == "big" ? (
 				<div
+					data-aos={direction === "right" ? "fade-left" : "fade-right"}
 					style={{ width: "200px", marginRight: "1.5rem" }}
 					className="flex flex-col items-center  justify-center h-[200px] bg-white border-[3px] mr-2 border-solid border-eccblue rounded-[14px]"
 				>
@@ -36,6 +38,7 @@ const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type }) => {
 				</div>
 			) : (
 				<div
+					data-aos={direction === "right" ? "fade-left" : "fade-right"}
 					style={{ width: "175px", marginRight: "0.5rem" }}
 					className="flex flex-col items-center  justify-center h-[160px] bg-white border-[1px] mr-2 border-solid border-eccblue rounded-[14px]"
 				>
