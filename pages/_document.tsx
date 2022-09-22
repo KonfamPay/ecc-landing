@@ -4,16 +4,10 @@ import AOS from "aos";
 export default function Document() {
 	return (
 		<Html lang="en">
-			<Head>
-				<link
-					href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-					rel="stylesheet"
-				></link>
-			</Head>
+			<Head />
 			<body>
 				<Main />
 				<NextScript />
-				<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 				<script
 					src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
 					defer
