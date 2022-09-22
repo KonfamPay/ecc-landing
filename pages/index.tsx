@@ -14,10 +14,6 @@ const Home: NextPage = () => {
 					rel="icon"
 					href="/assets/Images/eccLogo.svg"
 				/>
-				<link
-					href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-					rel="stylesheet"
-				></link>
 			</Head>
 			<div className="pt-[70px] sm:pt-[80px] lg:pt-[100px]">
 				<NavBar
