@@ -128,6 +128,7 @@ export const HeroSection = () => {
 								src="/assets/Images/desktopDashboard.png"
 							/>
 							<img
+								data-aos="fade-up"
 								className="absolute w-full max-w-[160px] top-[218px] -right-[70px]"
 								src="/assets/Images/mobileDashboard.png"
 							/>
