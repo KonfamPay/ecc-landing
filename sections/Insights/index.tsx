@@ -77,7 +77,10 @@ export const Insights: React.FC = () => {
 				<div className="text-white mt-6 px-4 text-center ">
 					<p className="text-[20px]">A Quick Insight into our Complaints Statistics</p>
 				</div>
-				<div className="flex flex-col items-center">
+				<div
+					style={{ paddingLeft: "0.5rem" }}
+					className="flex flex-col items-center"
+				>
 					<div className="flex flex-row w-full mb-6 mt-8">
 						<Box
 							type="small"
@@ -129,7 +132,7 @@ export const Insights: React.FC = () => {
 				</div>
 
 				<div className="flex flex-col items-center w-[80%] text-white px-3 mt-6">
-					<p className="text-center">We are the voice of consumers. Diam eget elementum pellentesque et urna. Sed velit quis mauris, amet vel pellentesque et urna. Sed velit quis mauris, amet vel </p>
+					<p className="text-center">We are the voice of Consumers. We are solely driven by the lines of thought that business is not just a transaction, but a relationship that allows both parties to benefit. </p>
 					<button className="bg-white w-auto items-center p-2 rounded-md text-eccblue flex mb-8 flex-row mt-5 text-[14px] ">
 						<img
 							className="w-[14px] h-[14px]"
