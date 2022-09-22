@@ -114,7 +114,7 @@ export const HeroSection = () => {
 						className="absolute -right-[100px] md:-right-[80px] xl:-right-[180px] 2xl:-right-[240px] md:-top-[120px] -top-[100px]"
 					/>
 					<img
-						src="/assets/Images/leftDots.svg"
+						src="/assets/Images/LeftDots.svg"
 						className="absolute md:-left-[90px] -left-[125px] lg:-left-[120px] xl:-left-[160px] 2xl:-left-[230px] top-[90px] md:top-[80px] lg:top-[100px]"
 					/>
 					<img

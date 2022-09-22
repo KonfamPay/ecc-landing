@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 							<Image
-								src="/assets/social-icons/facebook.svg"
+								src="/assets/social-icons/Facebook.svg"
 								alt="Picture of the author"
 								layout="fill"
 								objectFit="contain"
@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 							<Image
-								src="/assets/social-icons/instagram.svg"
+								src="/assets/social-icons/Instagram.svg"
 								alt="Picture of the author"
 								layout="fill"
 								objectFit="contain"
@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 							<Image
-								src="/assets/social-icons/twitter.svg"
+								src="/assets/social-icons/Twitter.svg"
 								alt="Picture of the author"
 								layout="fill"
 								objectFit="contain"
