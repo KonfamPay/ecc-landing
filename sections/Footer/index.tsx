@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 				<p className="max-w-[530px] text-center text-sm sm:text-xl mt-5">Email Address: konfampay@gmail.com</p>
 				<div className="mt-5 flex items-center justify-center space-x-5 sm:space-x-8">
 					<Link
-						href={"/"}
+						href={"https://www.facebook.com/ecommercecomplaint"}
 						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 						</div>
 					</Link>
 					<Link
-						href={"/"}
+						href={"https://www.instagram.com/ecommercecomplaint/"}
 						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 						</div>
 					</Link>
 					<Link
-						href={"/"}
+						href={"https://twitter.com/eccnigeria"}
 						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
