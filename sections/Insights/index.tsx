@@ -49,14 +49,7 @@ export const Insights: React.FC = () => {
 									src="./assets/Images/NairaSign.svg"
 									alt=""
 								/>{" "}
-								<span>
-									{" "}
-									<CountUp
-										duration={2}
-										start={0}
-										end={903291695}
-									></CountUp>
-								</span>
+								<span> {"903,291,695"}</span>
 							</div>
 							<p className="font-semibold text-[16px]">Avg. Daily Scam Report</p>
 							<div className="font-semibold text-[20.4px] flex flex-row items-center text-eccblue">
@@ -65,13 +58,7 @@ export const Insights: React.FC = () => {
 									src="./assets/Images/NairaSign.svg"
 									alt=""
 								/>{" "}
-								<span>
-									<CountUp
-										duration={2}
-										start={0}
-										end={45000}
-									></CountUp>
-								</span>
+								<span>{"45,000"}</span>
 							</div>
 						</div>
 					</div>
@@ -83,7 +70,7 @@ export const Insights: React.FC = () => {
 					<p className="text-[20px]">A Quick Insight into our Complaints Statistics</p>
 				</div>
 				<div className="flex flex-col items-center">
-					<div className="flex flex-row w-full mb-6 mt-8">
+					<div className="flex flex-col gap-7 w-full mb-6 mt-8 sm:flex-row">
 						<Box
 							direction="left"
 							type="small"
@@ -112,13 +99,7 @@ export const Insights: React.FC = () => {
 								src="./assets/Images/NairaSign.svg"
 								alt=""
 							/>{" "}
-							<span>
-								<CountUp
-									duration={2}
-									start={0}
-									end={903291695}
-								></CountUp>
-							</span>
+							<span>{"903,291,695"}</span>
 						</div>
 						<p className="font-semibold text-[12px]">Avg. Daily Scam Report</p>
 						<div className="font-semibold text-[14.4px] flex flex-row items-center text-eccblue">
@@ -127,13 +108,7 @@ export const Insights: React.FC = () => {
 								src="./assets/Images/NairaSign.svg"
 								alt=""
 							/>{" "}
-							<span>
-								<CountUp
-									duration={2}
-									start={0}
-									end={45000}
-								></CountUp>
-							</span>
+							<span>{"45,000"}</span>
 						</div>
 					</div>
 				</div>
