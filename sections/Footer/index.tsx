@@ -30,12 +30,14 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
-							<Image
-								src="/assets/social-icons/Facebook.svg"
-								alt="Picture of the author"
-								layout="fill"
-								objectFit="contain"
-							/>
+							<a target="_blank">
+								<Image
+									src="/assets/social-icons/Facebook.svg"
+									alt="Picture of the author"
+									layout="fill"
+									objectFit="contain"
+								/>
+							</a>
 						</div>
 					</Link>
 					<Link
@@ -43,12 +45,14 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
-							<Image
-								src="/assets/social-icons/Instagram.svg"
-								alt="Picture of the author"
-								layout="fill"
-								objectFit="contain"
-							/>
+							<a target="_blank">
+								<Image
+									src="/assets/social-icons/Instagram.svg"
+									alt="Picture of the author"
+									layout="fill"
+									objectFit="contain"
+								/>
+							</a>
 						</div>
 					</Link>
 					<Link
@@ -56,12 +60,14 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
-							<Image
-								src="/assets/social-icons/Twitter.svg"
-								alt="Picture of the author"
-								layout="fill"
-								objectFit="contain"
-							/>
+							<a target="_blank">
+								<Image
+									src="/assets/social-icons/Twitter.svg"
+									alt="Picture of the author"
+									layout="fill"
+									objectFit="contain"
+								/>
+							</a>
 						</div>
 					</Link>
 				</div>
