@@ -31,7 +31,7 @@ export const ThankYou: React.FC<ThankYouProps> = ({ setIsModalShowing }) => {
 				/>
 				<div className="pt-5 sm:pt-10 pb-7 sm:pb-14 px-3.5 sm:px-9">
 					<p className="text-eccblue text-center text-[15px] sm:text-[32px]">Thank You!</p>
-					<p className="text-[#434343] mt-5 text-center text-xs sm:text-lg">We have recieved your email address. You will be the first person we’ll notify when we launch soon. Thank you for being a part of project </p>
+					<p className="text-[#434343] mt-5 text-center text-xs sm:text-lg">We have recieved your email address. You will be the first person we’ll notify when we launch soon. Thank you for being a part of this project </p>
 				</div>
 			</div>
 		</motion.div>
