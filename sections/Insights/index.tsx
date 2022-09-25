@@ -25,17 +25,17 @@ export const Insights: React.FC = () => {
 								direction="left"
 								type="big"
 								item1="Total Complaints"
-								item2={43764}
-								item3="Confirmed Complaints"
-								item4={38200}
+								item2={"43,764"}
+								item3="Confirmed Causes"
+								item4={"38,200"}
 							/>
 							<Box
 								direction="right"
 								type="big"
 								item1="Scam Cases"
-								item2={30605}
+								item2={"30,605"}
 								item3="Unsatisfied Transactions"
-								item4={7595}
+								item4={"7,595"}
 							/>
 						</div>
 						<div
@@ -66,22 +66,22 @@ export const Insights: React.FC = () => {
 							direction="left"
 							type="small"
 							item1="Total Complaints"
-							item2={43764}
-							item3="Confirmed Complaints"
-							item4={38200}
+							item2={"43,764"}
+							item3="Confirmed Causes"
+							item4={"38,200"}
 						/>
 						<Box
 							direction="right"
 							type="small"
 							item1="Scam Cases"
-							item2={30605}
+							item2={"30,605"}
 							item3="Unsatisfied Transactions"
-							item4={7595}
+							item4={"7,595"}
 						/>
 					</div>
 					<div
 						data-aos="fade-up"
-						className="flex flex-col justify-center items-center w-[170px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]"
+						className="flex flex-col justify-center items-center w-[175px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]"
 					>
 						<p className="font-semibold text-[12px]">Value of complaints</p>
 						<div className="font-semibold text-[14.4px] flex flex-row items-center text-eccblue">
