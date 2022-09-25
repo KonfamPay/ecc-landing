@@ -7,7 +7,7 @@ export const Insights: React.FC = () => {
 			<div className="lg:block hidden">
 				<div className="flex flex-row h-[370px] bg-gradient-to-r from-[#0B63C5] to-[#073D79]">
 					<div className="w-[40%] px-[60px] flex flex-col items-center justify-center text-white">
-						<p className=" font-semibold text-[30px] ">A Quick Insight into our Complaints Statistics</p>
+						<p className=" font-semibold text-[30px] ">Quick Insight into our Complaints Statistics</p>
 						<p className="my-4">We are the voice of Consumers. We are solely driven by the lines of thought that business is not just a transaction, but a relationship that allows both parties to benefit.</p>
 						<div className="flex w-full items-start mt-3">
 							<button className="bg-white w-auto p-2 rounded-md text-eccblue flex flex-row ">
@@ -67,7 +67,7 @@ export const Insights: React.FC = () => {
 
 			<div className="lg:hidden flex flex-col bg-gradient-to-r from-[#0B63C5] to-[#073D79] items-center">
 				<div className="text-white mt-6 px-4 text-center ">
-					<p className="text-[20px]">A Quick Insight into our Complaints Statistics</p>
+					<p className="text-[20px]">Quick Insight into our Complaints Statistics</p>
 				</div>
 				<div className="flex flex-col items-center">
 					<div className="flex flex-col gap-7 w-full mb-6 mt-8 sm:flex-row">
