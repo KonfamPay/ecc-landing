@@ -30,7 +30,6 @@ export const TiredOfGettingScammed = () => {
 					setContactFormData({
 						email: "",
 					});
-					// window.alert("Message sent!");
 					setIsModalShowing(true);
 				}
 			} catch (error: any) {

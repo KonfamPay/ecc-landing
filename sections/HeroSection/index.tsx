@@ -30,7 +30,6 @@ export const HeroSection = () => {
 					setContactFormData({
 						email: "",
 					});
-					// window.alert("Message sent!");
 					setIsModalShowing(true);
 				}
 			} catch (error: any) {
