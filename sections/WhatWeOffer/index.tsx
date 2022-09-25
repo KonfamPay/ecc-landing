@@ -20,7 +20,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 					/>
 					<div className="w-auto flex flex-row justify-between lg:mx-[100px] mx-[30px]">
 						<div className=" font-medium lg:text-[41px] text-[20px]">
-							What we<span className="text-eccblue mx-3">offer</span>to our consumers
+							What we<span className="text-eccblue mx-3">offer</span>to consumers
 						</div>
 					</div>
 					<img

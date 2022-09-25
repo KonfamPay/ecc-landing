@@ -60,7 +60,7 @@ export const TiredOfGettingScammed = () => {
 							data-aos="fade-up"
 							className="text-[#0B63C5] text-[18px] text-center lg:text-left lg:text-[30px] px-[30px] lg:px-[0] font-medium"
 						>
-							Tired of Getting Scammed by Online Vendors and Complanies?
+							Tired of Getting Scammed by Online Vendors and Brands?
 						</h1>
 						<p
 							data-aos="fade-up"
