@@ -59,7 +59,7 @@ export const HeroSection = () => {
 						M
 						<motion.img
 							initial={{ opacity: 0, scale: 0.7 }}
-							animate={{ opacity: 1, scale: 1, transition: { delay: 2 } }}
+							animate={{ opacity: 1, scale: 1, transition: { delay: 2, duration: 0.4 } }}
 							className="absolute bottom-[19px] md:-top-[35px] -left-[18px] md:-left-[33px]"
 							src="/assets/Images/Mtopleft.svg"
 						/>
@@ -69,7 +69,7 @@ export const HeroSection = () => {
 						resolve
 						<motion.img
 							initial={{ opacity: 0, scale: 0.7 }}
-							animate={{ opacity: 1, scale: 1, transition: { delay: 2 } }}
+							animate={{ opacity: 1, scale: 1, transition: { delay: 2, duration: 0.4 } }}
 							className="absolute -bottom-[5px] right-0"
 							src="/assets/Images/dashedLine.svg"
 						/>
@@ -180,7 +180,6 @@ export const HeroSection = () => {
 								initial={{ opacity: 0, scale: 0.8, y: 80 }}
 								animate={{ opacity: 1, y: 0, scale: 1 }}
 								transition={{ delay: 1.7, duration: 0.4 }}
-								data-aos="fade-up"
 								className="absolute w-full max-w-[160px] top-[218px] -right-[70px]"
 								src="/assets/Images/mobileDashboard.png"
 							/>
