@@ -20,7 +20,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 					/>
 					<div className="w-auto flex flex-row justify-between lg:mx-[100px] mx-[30px]">
 						<div className=" font-medium lg:text-[41px] text-[20px]">
-							What we<span className="text-eccblue mx-3">offer</span>to our users
+							What we<span className="text-eccblue mx-3">offer</span>to consumers
 						</div>
 					</div>
 					<img
@@ -30,7 +30,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 					/>
 				</div>
 				<div className="lg:w-[600px] w-[80%] mt-4">
-					<p className="text-center">We are the voice of consumers. We offer a healthy shopping experience</p>
+					<p className="text-center">We take pride in providing consumers a healthy shopping experience, and we stand by the product/services they are buying. If you encounter an issue with your purchase, please let us know as soon as possible.</p>
 				</div>
 			</header>
 			<div className="lg:block hidden active:scale-90 transition-[200ms] text-black">
@@ -57,7 +57,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 
 						<div className="text-justify w-[40%] ml-12 mr-1">
 							<p className="text-[18px] font-semibold">Easy complaint filing and Resolution</p>
-							<p>We have made it easier to submit complaints and receive a resolution</p>
+							<p>We want to help you with any shopping-related issues. We have simplified the process for you to submit a complaint and receive a resolution in short order.</p>
 						</div>
 					</div>
 
@@ -67,7 +67,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 					>
 						<div className="text-justify w-[40%] mr-12 ">
 							<p className="text-[18px] font-semibold">Quick search</p>
-							<p>Scams are everywhere. But, with our help, you can quickly and easily find all of the scams that we have already received complaints about. </p>
+							<p>We&apos;ve built a fool-proof scam filter to help you find all the scams that we have already received complaints about. Our exclusive algorithm automatically checks and compares every company, product and service on our site with the latest data available in a transparent way so you can see which brands really deliver. </p>
 						</div>
 						<div className="flex flex-col items-center ">
 							<div>
@@ -107,7 +107,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						</div>
 						<div className="text-justify w-[40%] ml-12 mr-1">
 							<p className="text-[18px] font-semibold">Write a complaint letter</p>
-							<p>An easy to use and editable tool that allows you to express your grievances to brands/Companies.</p>
+							<p>An easy to use and editable self service tool that allows you to express your grievances to brands/Companies who have failed to provide you with the quality product or service.</p>
 						</div>
 					</div>
 
@@ -146,7 +146,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						/>
 						<div className="text-left my-4 text-[14px]">
 							<p className=" font-semibold text-[16px]  mb-2">Easy Complaint Filing and Resolution</p>
-							<p>We have made it easier to submit complaints and receive a resolution</p>
+							<p>We want to help you with any shopping-related issues. We have simplified the process for you to submit a complaint and receive a resolution in short order.</p>
 						</div>
 						<img
 							className="h-[52px] ml-4 "
@@ -166,7 +166,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						/>
 						<div className="text-left my-4 text-[14px]">
 							<p className=" font-semibold text-[16px]  mb-2">Quick search</p>
-							<p>Scams are everywhere. But, with our help, you can quickly and easily find all of the scams that we have already received complaints about.</p>
+							<p>We&apos;ve built a fool-proof scam filter to help you find all the scams that we have already received complaints about. Our exclusive algorithm automatically checks and compares every company, product and service on our site with the latest data available in a transparent way so you can see which brands really deliver.</p>
 						</div>
 						<img
 							className="h-[52px] ml-4 "
@@ -186,7 +186,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						/>
 						<div className="text-left my-4 text-[14px]">
 							<p className=" font-semibold text-[16px]  mb-2">Write a complaint letter</p>
-							<p>An easy to use and editable tool that allows you to express your grievances to brands/Companies.</p>
+							<p>An easy to use and editable self service tool that allows you to express your grievances to brands/Companies who have failed to provide you with the quality product or service.</p>
 						</div>
 						<img
 							className="h-[52px] ml-4 "

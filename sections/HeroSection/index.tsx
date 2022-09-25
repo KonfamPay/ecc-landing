@@ -1,9 +1,16 @@
-import { SetStateAction, useState } from "react";
+import { useEffect, useState } from "react";
 import { ThankYou } from "..";
 import { motion } from "framer-motion";
 
 export const HeroSection = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	useEffect(() => {
+		if (isModalSHowing == true) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [isModalSHowing]);
 	const [contactFormData, setContactFormData] = useState({
 		email: "",
 	});
@@ -31,7 +38,6 @@ export const HeroSection = () => {
 					setContactFormData({
 						email: "",
 					});
-					// window.alert("Message sent!");
 					setIsModalShowing(true);
 				}
 			} catch (error: any) {
