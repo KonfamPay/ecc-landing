@@ -26,11 +26,19 @@ export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef }) 
 	};
 	return (
 		<nav className="bg-clearblue flex px-[20px] lg:px-[100px] justify-between items-center py-[20px] fixed top-0 left-0 right-0 z-20">
-			<img
+			<motion.img
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 0.22 }}
 				className="w-[42px] z-50 lg:w-[65px]"
 				src="/assets/Images/eccLogo.svg"
 			/>
-			<div className="hidden md:flex gap-x-[67px] text-black text-[18px]">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 0.22 }}
+				className="hidden md:flex gap-x-[67px] text-black text-[18px]"
+			>
 				<p
 					style={{ color: scrollReport < 600 ? "#0B63C5" : "black" }}
 					className="text-eccblue cursor-pointer"
@@ -52,8 +60,13 @@ export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef }) 
 				>
 					Contact us
 				</p>
-			</div>
-			<div className="flex md:block gap-x-[18px] items-center">
+			</motion.div>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 0.22 }}
+				className="flex md:block gap-x-[18px] items-center"
+			>
 				<button className="h-[30px] lg:h-[60px] sm:h-[40px] w-[97px] sm:w-[120px] lg:w-[166px] font-semibold bg-eccblue text-[12px] sm:text-[15px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] relative active:translate-y-[2px] lg:active:translate-y-[5px] active:shadow-md transition-all text-white">Join Waitlist</button>
 				<div
 					onClick={() => setMobileNavShowing(true)}
@@ -61,7 +74,7 @@ export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef }) 
 				>
 					<img src="/assets/Images/mobileHamburgerNav.svg" />
 				</div>
-			</div>
+			</motion.div>
 			<AnimatePresence>
 				{mobileNavShowing && (
 					<motion.nav
