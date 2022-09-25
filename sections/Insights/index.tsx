@@ -43,22 +43,13 @@ export const Insights: React.FC = () => {
 							className="flex flex-col justify-center items-center w-[220px] h-[200px] bg-white border-[3px] top-7  relative border-solid border-eccblue rounded-[14px]"
 						>
 							<p className="font-semibold text-[16px]">Total Amount of Report</p>
-							<div className="font-semibold text-[20.4px] flex flex-row mb-3 items-center text-eccblue">
-								<img
-									className="w-[20px] h-[20px]"
-									src="./assets/Images/NairaSign.svg"
-									alt=""
-								/>{" "}
-								<span> {"903,291,695"}</span>
-							</div>
-							<p className="font-semibold text-[16px]">Avg. Daily Scam Report</p>
 							<div className="font-semibold text-[20.4px] flex flex-row items-center text-eccblue">
 								<img
 									className="w-[20px] h-[20px]"
 									src="./assets/Images/NairaSign.svg"
 									alt=""
 								/>{" "}
-								<span>{"45,000"}</span>
+								<span> {"903,291,695"}</span>
 							</div>
 						</div>
 					</div>
@@ -70,7 +61,7 @@ export const Insights: React.FC = () => {
 					<p className="text-[20px]">Quick Insight into our Complaints Statistics</p>
 				</div>
 				<div className="flex flex-col items-center">
-					<div className="flex flex-col gap-7 w-full mb-6 mt-8 sm:flex-row">
+					<div className="flex flex-col gap-7 mb-6 mt-8 sm:flex-row">
 						<Box
 							direction="left"
 							type="small"
@@ -93,22 +84,13 @@ export const Insights: React.FC = () => {
 						className="flex flex-col justify-center items-center w-[170px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]"
 					>
 						<p className="font-semibold text-[12px]">Total Amount of Report</p>
-						<div className="font-semibold text-[14.4px] flex flex-row mb-3 items-center text-eccblue">
-							<img
-								className="w-[14px] h-[14px]"
-								src="./assets/Images/NairaSign.svg"
-								alt=""
-							/>{" "}
-							<span>{"903,291,695"}</span>
-						</div>
-						<p className="font-semibold text-[12px]">Avg. Daily Scam Report</p>
 						<div className="font-semibold text-[14.4px] flex flex-row items-center text-eccblue">
 							<img
 								className="w-[14px] h-[14px]"
 								src="./assets/Images/NairaSign.svg"
 								alt=""
 							/>{" "}
-							<span>{"45,000"}</span>
+							<span>{"903,291,695"}</span>
 						</div>
 					</div>
 				</div>
