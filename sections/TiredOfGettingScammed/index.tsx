@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThankYou } from "..";
 
 export const TiredOfGettingScammed = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	useEffect(() => {
+		if (isModalSHowing == true) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [isModalSHowing]);
 	const [contactFormData, setContactFormData] = useState({
 		email: "",
 	});
