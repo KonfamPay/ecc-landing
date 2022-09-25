@@ -20,7 +20,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 					/>
 					<div className="w-auto flex flex-row justify-between lg:mx-[100px] mx-[30px]">
 						<div className=" font-medium lg:text-[41px] text-[20px]">
-							What we<span className="text-eccblue mx-3">offer</span>to our users
+							What we<span className="text-eccblue mx-3">offer</span>to consumers
 						</div>
 					</div>
 					<img
@@ -57,7 +57,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 
 						<div className="text-justify w-[40%] ml-12 mr-1">
 							<p className="text-[18px] font-semibold">Easy complaint filing and Resolution</p>
-							<p>We have made it easier to submit complaints and receive a resolution</p>
+							<p>We want to help you with any shopping-related issues. We have simplified the process for you to submit a complaint and receive a resolution in short order.</p>
 						</div>
 					</div>
 
@@ -146,7 +146,7 @@ export const WhatWeOffer: React.FC<WhatWeOfferProps> = ({ sectionRef }) => {
 						/>
 						<div className="text-left my-4 text-[14px]">
 							<p className=" font-semibold text-[16px]  mb-2">Easy Complaint Filing and Resolution</p>
-							<p>We have made it easier to submit complaints and receive a resolution</p>
+							<p>We want to help you with any shopping-related issues. We have simplified the process for you to submit a complaint and receive a resolution in short order.</p>
 						</div>
 						<img
 							className="h-[52px] ml-4 "

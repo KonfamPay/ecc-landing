@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThankYou } from "..";
 
 export const TiredOfGettingScammed = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	useEffect(() => {
+		if (isModalSHowing == true) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [isModalSHowing]);
 	const [contactFormData, setContactFormData] = useState({
 		email: "",
 	});
@@ -30,7 +37,6 @@ export const TiredOfGettingScammed = () => {
 					setContactFormData({
 						email: "",
 					});
-					// window.alert("Message sent!");
 					setIsModalShowing(true);
 				}
 			} catch (error: any) {
@@ -54,13 +60,13 @@ export const TiredOfGettingScammed = () => {
 							data-aos="fade-up"
 							className="text-[#0B63C5] text-[18px] text-center xl:text-left xl:text-[30px] px-[30px] xl:px-[0] font-medium"
 						>
-							Tired of Getting Scammed by Online Vendors and Complanies?
+							Tired of Getting Scammed by Online Vendors and Brands?
 						</h1>
 						<p
 							data-aos="fade-up"
 							className="text-[#434343] text-[14px] text-center xl:text-left xl:text-[20px] px-[30px] xl:px-[0]"
 						>
-							Join our fight against unsatisfied services and scam cases. Sign up for our waitlist to be the first person to know when we launch.{" "}
+							We make it easy for you to get your money back or get a replacement or compensation. Join the fight!
 						</p>
 						<form
 							className="xl:pt-[66px] px-[24px] xl:px-[unset] flex justify-center gap-[7px] w-[100%] xl:gap-[21px]"
