@@ -42,7 +42,7 @@ export const Insights: React.FC = () => {
 							data-aos="fade-up"
 							className="flex flex-col justify-center items-center w-[220px] h-[200px] bg-white border-[3px] top-7  relative border-solid border-eccblue rounded-[14px]"
 						>
-							<p className="font-semibold text-[16px]">Total value of complaints</p>
+							<p className="font-semibold text-[16px]">Value of complaints</p>
 							<div className="font-semibold text-[20.4px] flex flex-row items-center text-eccblue">
 								<img
 									className="w-[20px] h-[20px]"
@@ -83,7 +83,7 @@ export const Insights: React.FC = () => {
 						data-aos="fade-up"
 						className="flex flex-col justify-center items-center w-[170px] h-[160px] bg-white border-[1px] top-7 border-solid border-eccblue rounded-[14px]"
 					>
-						<p className="font-semibold text-[12px]">Total value of complaints</p>
+						<p className="font-semibold text-[12px]">Value of complaints</p>
 						<div className="font-semibold text-[14.4px] flex flex-row items-center text-eccblue">
 							<img
 								className="w-[14px] h-[14px]"
