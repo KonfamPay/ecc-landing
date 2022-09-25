@@ -66,7 +66,7 @@ export const TiredOfGettingScammed = () => {
 							data-aos="fade-up"
 							className="text-[#434343] text-[14px] text-center xl:text-left xl:text-[20px] px-[30px] xl:px-[0]"
 						>
-							We make it easy for you to get your money back or get a replacement or compensation. Join the fight!
+							We make it easy for you to get your money back or get a replacement or compensation.
 						</p>
 						<form
 							className="xl:pt-[66px] px-[24px] xl:px-[unset] flex justify-center gap-[7px] w-[100%] xl:gap-[21px]"
