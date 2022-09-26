@@ -53,7 +53,7 @@ export const TiredOfGettingScammed = () => {
 	};
 	return (
 		<>
-			<div className="flex px-[0px] xl:px-[100px] justify-between items-center py-[20px] xl:pt-[235px] my-[100px] xl:mt-0">
+			<div className="flex px-[0px] xl:px-[100px] justify-between items-center py-[20px] xl:pt-[235px] my-[100px] xl:mt-0 max-w-[1290px] mx-auto">
 				<div className="bg-[#F1F7FE] px-[] xl:px-[32px] xl:rounded-[20px] pt-[74px] pb-[36px] xl:py-[82px] w-full relative">
 					<div className="xl:w-[700px] flex flex-col gap-[16px]">
 						<h1

@@ -102,8 +102,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ joinWaitlistButtonRef 
 					transition={{ duration: 0.4, delay: 0.85 }}
 					className=" text-[14px] md:text-[17px] lg:text-[20px] max-w-[377px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1027px] text-center mx-auto mt-[14px] px-[15px] md:mt-[15px] text-[#434343]"
 				>
-					E-commerce Complaint is a platform that allows consumers to resolve disputes with brands. It functions as an extension of the traditional complaint redressal process, allowing consumers to easily file complaints and have them resolved by the relevant brand or company. We use technology to add accountability to grievances, communicating between parties via Social Media, SMS, Email, and
-					phone calls.
+					{/* E-commerce Complaint is a platform that allows consumers to resolve disputes with brands. It functions as an extension of the traditional complaint redressal process, allowing consumers to easily file complaints and have them resolved by the relevant brand or company. We use technology to add accountability to grievances, communicating between parties via Social Media, SMS, Email, and
+					phone calls. */}
+					E-commerce Complaint helps consumers address brand problems. It extends the usual complaint redressal process, allowing consumers to readily file grievances and have them resolved. We utilise Social Media, SMS, Email, and phone calls to add responsibility to grievances.
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
