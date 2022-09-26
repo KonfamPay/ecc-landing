@@ -90,8 +90,8 @@ export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef, jo
 						transition={{ duration: 0.22 }}
 						className="fixed top-0 left-0 right-0 bottom-0 bg-clearblue overflow-hidden md:hidden"
 					>
-						<div className="w-full h-full flex flex-col justify-center items-center relative bottom-[10px] gap-y-[79px]">
-							<div className="flex flex-col items-center text-[22px] text-black gap-y-[50px]">
+						<div className="w-full h-full flex flex-col justify-center items-center relative bottom-[10px] xxsm:gap-y-[30px] xsm:gap-y-[79px]">
+							<div className="flex flex-col items-center text-[22px] text-black xsm:gap-y-[50px]  py-[20px] xxsm:gap-y-[25px]">
 								<motion.p
 									variants={navItemVariants}
 									style={{ color: scrollReport < 347 ? "#0B63C5" : "black" }}
