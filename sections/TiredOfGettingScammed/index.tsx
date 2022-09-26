@@ -3,6 +3,7 @@ import { ThankYou } from "..";
 
 export const TiredOfGettingScammed = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	const [isDisabled, setIsDisabled] = useState<boolean>(false);
 	useEffect(() => {
 		if (isModalSHowing == true) {
 			document.body.style.overflow = "hidden";
@@ -21,6 +22,7 @@ export const TiredOfGettingScammed = () => {
 
 	const handleContactFormSubmit = async (e: any) => {
 		e.preventDefault();
+		setIsDisabled(true);
 		if (contactFormData.email.length > 10) {
 			try {
 				const response = await fetch("https://eccwaitlistbackend.herokuapp.com/waitlist", {
@@ -38,6 +40,7 @@ export const TiredOfGettingScammed = () => {
 						email: "",
 					});
 					setIsModalShowing(true);
+					setIsDisabled(false);
 				}
 			} catch (error: any) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
@@ -46,6 +49,7 @@ export const TiredOfGettingScammed = () => {
 					success: false,
 					message: error.message,
 				});
+				setIsDisabled(false);
 			}
 		} else {
 			window.alert("Email Address should be longer than 10 characters");
@@ -53,28 +57,28 @@ export const TiredOfGettingScammed = () => {
 	};
 	return (
 		<>
-			<div className="flex px-[0px] lg:px-[100px] justify-between items-center py-[20px] lg:pt-[235px] my-[100px] lg:mt-0">
-				<div className="bg-[#F1F7FE] px-[] lg:px-[32px] lg:rounded-[20px] pt-[74px] pb-[36px] lg:py-[82px] w-full relative">
-					<div className="lg:w-[700px] flex flex-col gap-[16px]">
+			<div className="flex px-[0px] xl:px-[100px] justify-between items-center py-[20px] xl:pt-[235px] my-[100px] xl:mt-0 max-w-[1290px] mx-auto">
+				<div className="bg-[#F1F7FE] px-[] xl:px-[32px] xl:rounded-[20px] pt-[74px] pb-[36px] xl:py-[82px] w-full relative">
+					<div className="xl:w-[700px] flex flex-col gap-[16px]">
 						<h1
 							data-aos="fade-up"
-							className="text-[#0B63C5] text-[18px] text-center lg:text-left lg:text-[30px] px-[30px] lg:px-[0] font-medium"
+							className="text-[#0B63C5] text-[18px] text-center xl:text-left xl:text-[30px] px-[30px] xl:px-[0] font-medium"
 						>
 							Tired of Getting Scammed by Online Vendors and Brands?
 						</h1>
 						<p
 							data-aos="fade-up"
-							className="text-[#434343] text-[14px] text-center lg:text-left lg:text-[20px] px-[30px] lg:px-[0]"
+							className="text-[#434343] text-[14px] text-center xl:text-left xl:text-[20px] px-[30px] xl:px-[0]"
 						>
-							We make it easy for you to get your money back or get a replacement or compensation. Join the fight!
+							We make it easy for you to get your money back or get a replacement or compensation.
 						</p>
 						<form
-							className="lg:pt-[66px] px-[24px] lg:px-[unset] flex gap-[7px] w-[100%] lg:gap-[21px]"
+							className="xl:pt-[66px] px-[24px] xl:px-[unset] flex justify-center gap-[7px] w-[100%] xl:gap-[21px]"
 							onSubmit={handleContactFormSubmit}
 						>
 							<input
 								type="email"
-								className="placeholder:text-[#B4A5A5] text-[12px] lg:text-[18px] w-[250px] lg:w-[520px] rounded-[5px] outline-none bg-[#FFFFFF] lg:rounded-[12px] px-[10px] py-[6px] lg:p-[16px] text-[#000000]"
+								className="placeholder:text-[#B4A5A5] text-[12px] xl:text-[18px] w-[250px] lg:w-[520px] rounded-[5px] outline-none bg-[#FFFFFF] xl:rounded-[12px] px-[10px] py-[6px] xl:p-[16px] text-[#000000]"
 								placeholder="Enter your email address here"
 								value={contactFormData.email}
 								onChange={(e) =>
@@ -87,16 +91,17 @@ export const TiredOfGettingScammed = () => {
 							<input
 								type="submit"
 								id="submit"
-								className="py-[6px] px-[12px] lg:py-[16px] lg:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] lg:rounded-[12px] text-[#FFFFFF] text-[12px] lg:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-md transition-all lg:active:translate-y-[5px] cursor-pointer"
+								className={`py-[6px] px-[12px] xl:py-[16px] xl:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] xl:rounded-[12px] text-[#FFFFFF] text-[12px] xl:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] xl:shadow-[0px_5px_0px_rgba(0,0,0,1)] transition-all ${!isDisabled ? "active:translate-y-[2px] active:shadow-md xl:active:translate-y-[5px] cursor-pointer" : "cursor-not-allowed"}`}
 								value="Join Waitlist"
+								disabled={isDisabled}
 							/>
 						</form>
 					</div>
-					<div className="rounded-[20px] border-[#0B63C5] border-[3px] border-dashed p-[8px] lg:p-[28px] lg:w-[434px] absolute top-[-70px] left-[50%] translate-x-[-50%] lg:left-[unset] lg:translate-x-[unset] lg:right-[-50px] flex justify-center">
+					<div className="rounded-[20px] border-[#0B63C5] border-[3px] border-dashed p-[8px] xl:p-[28px] xl:w-[434px] absolute top-[-70px] left-[50%] translate-x-[-50%] xl:left-[unset] xl:translate-x-[unset] xl:right-[-50px] flex justify-center">
 						<img
 							src="assets/Images/awareness.png"
 							alt="awareness"
-							className="w-[110px] lg:w-[378px]"
+							className="w-[110px] xl:w-[378px]"
 						/>
 					</div>
 					<img
@@ -122,7 +127,7 @@ export const TiredOfGettingScammed = () => {
 					<img
 						src="assets/Images/bluePolygon.png"
 						alt="Blue-polygon"
-						className="absolute left-[81px] lg:left-[unset] top-[-35px] lg:top-[unset] w-[14.43px] lg:w-[unset] lg:bottom-[29px] lg:right-[337px]"
+						className="absolute left-[81px] lg:left-[unset] lg:hidden xl:block top-[-35px] lg:top-[unset] w-[14.43px] lg:w-[unset] lg:bottom-[29px] lg:right-[337px]"
 					/>
 				</div>
 			</div>

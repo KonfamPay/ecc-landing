@@ -10,6 +10,7 @@ const Home: NextPage = () => {
 	});
 	const whatWeOfferRef = useRef(null);
 	const contactUsRef = useRef(null);
+	const joinWaitlistButtonRef = useRef(null);
 	return (
 		<>
 			<Head>
@@ -27,8 +28,9 @@ const Home: NextPage = () => {
 				<NavBar
 					whatWeOfferRef={whatWeOfferRef}
 					contactUsRef={contactUsRef}
+					joinWaitlistButtonRef={joinWaitlistButtonRef}
 				/>
-				<HeroSection />
+				<HeroSection joinWaitlistButtonRef={joinWaitlistButtonRef} />
 				<WhatWeOffer sectionRef={whatWeOfferRef} />
 				<Insights />
 				<TiredOfGettingScammed />

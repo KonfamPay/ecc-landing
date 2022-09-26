@@ -28,9 +28,9 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 				<p className="max-w-[739px] text-center text-sm sm:text-xl mt-8">Join our fight against unsatisfied services and scam cases. Sign up for our waitlist to be the first person to know when we launch.</p>
 				<p className="max-w-[530px] text-center text-sm sm:text-xl mt-5">Email Address: konfampay@gmail.com</p>
 				<div className="mt-5 flex items-center justify-center space-x-5 sm:space-x-8">
-					<Link
-						href={"https://www.facebook.com/ecommercecomplaint"}
-						passHref
+					<a
+						target="_blank"
+						href={"https://www.facebook.com/konfampay"}
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 							<Image
@@ -40,10 +40,10 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 								objectFit="contain"
 							/>
 						</div>
-					</Link>
-					<Link
+					</a>
+					<a
+						target="_blank"
 						href={"https://www.instagram.com/ecommercecomplaint/"}
-						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 							<Image
@@ -53,10 +53,10 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 								objectFit="contain"
 							/>
 						</div>
-					</Link>
-					<Link
+					</a>
+					<a
+						target="_blank"
 						href={"https://twitter.com/eccnigeria"}
-						passHref
 					>
 						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 							<Image
@@ -66,12 +66,12 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 								objectFit="contain"
 							/>
 						</div>
-					</Link>
+					</a>
 				</div>
 			</div>
 			<hr className="bg-white border-white w-full max-w-[1352px] mx-auto border mt-9 sm:mt-14" />
 			<p className="text-center flex items-center justify-center pt-5 sm:pt-9 pb-5 sm:pb-6 text-[10px] sm:text-base">
-				<span className="text-xs sm:text-base pr-2">&copy;</span>Copyright 2022. E-commerce complaints, Nigeria.
+				<span className="text-xs sm:text-base pr-2">&copy;</span>Copyright {new Date().getFullYear()}. E-commerce complaints, Nigeria.
 			</p>
 		</div>
 	);

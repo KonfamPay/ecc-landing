@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 import { ThankYou } from "..";
 import { motion } from "framer-motion";
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+	joinWaitlistButtonRef: RefObject<HTMLFormElement>;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ joinWaitlistButtonRef }) => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	const [isDisabled, setIsDisabled] = useState<boolean>(false);
 	useEffect(() => {
 		if (isModalSHowing == true) {
 			document.body.style.overflow = "hidden";
@@ -22,6 +27,7 @@ export const HeroSection = () => {
 
 	const handleContactFormSubmit = async (e: any) => {
 		e.preventDefault();
+		setIsDisabled(true);
 		if (contactFormData.email.length > 10) {
 			try {
 				const response = await fetch("https://eccwaitlistbackend.herokuapp.com/waitlist", {
@@ -39,6 +45,7 @@ export const HeroSection = () => {
 						email: "",
 					});
 					setIsModalShowing(true);
+					setIsDisabled(false);
 				}
 			} catch (error: any) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
@@ -47,6 +54,7 @@ export const HeroSection = () => {
 					success: false,
 					message: error.message,
 				});
+				setIsDisabled(false);
 			}
 		} else {
 			window.alert("Email Address should be longer than 10 characters");
@@ -83,7 +91,7 @@ export const HeroSection = () => {
 					complaints easily
 					<motion.figure
 						initial={{ opacity: 0 }}
-						animate={{ opacity: 1, transition: { delay: 1.1 } }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
 					>
 						<motion.img
 							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
@@ -98,8 +106,7 @@ export const HeroSection = () => {
 					transition={{ duration: 0.4, delay: 0.85 }}
 					className=" text-[14px] md:text-[17px] lg:text-[20px] max-w-[377px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1027px] text-center mx-auto mt-[14px] px-[15px] md:mt-[15px] text-[#434343]"
 				>
-					E-commerce Complaint is a platform that allows consumers to resolve disputes with brands. It functions as an extension of the traditional complaint redressal process, allowing consumers to easily file complaints and have them resolved by the relevant brand or company. We use technology to add accountability to grievances, communicating between parties via Social Media, SMS, Email, and
-					phone calls.
+					E-commerce Complaint helps consumers address brand problems. It extends the usual complaint redressal process, allowing consumers to readily file grievances and have them resolved. We utilise Social Media, SMS, Email, and phone calls to add responsibility to grievances.
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -107,7 +114,10 @@ export const HeroSection = () => {
 					transition={{ duration: 0.4, delay: 1.3 }}
 					className="mt-[36px] justify-center"
 				>
-					<form onSubmit={handleContactFormSubmit}>
+					<form
+						ref={joinWaitlistButtonRef}
+						onSubmit={handleContactFormSubmit}
+					>
 						<div className="flex w-full max-w-[329px] lg:max-w-[713px] gap-x-[7px] lg:gap-x-[21px]  mx-auto pb-[100px] md:pb-[140px] lg:pb-[178px]">
 							<input
 								type="email"
@@ -124,8 +134,9 @@ export const HeroSection = () => {
 							<input
 								type="submit"
 								id="submit"
-								className="w-[97px] md:w-[160px] lg:w-[160px] h-[30px] lg:h-[60px] font-semibold text-white text-[12px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] bg-eccblue shadow-[0px_2px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-md transition-all lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] lg:active:translate-y-[5px] cursor-pointer"
+								className={`w-[97px] md:w-[160px] lg:w-[160px] h-[30px] lg:h-[60px] font-semibold text-white text-[12px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] bg-eccblue shadow-[0px_2px_0px_rgba(0,0,0,1)]  lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] ${!isDisabled ? "active:translate-y-[2px] active:shadow-md transition-all lg:active:translate-y-[5px] cursor-pointer" : "cursor-not-allowed"}`}
 								value="Join Waitlist"
+								disabled={isDisabled}
 							/>
 						</div>
 					</form>

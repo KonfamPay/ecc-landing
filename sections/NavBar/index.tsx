@@ -4,9 +4,10 @@ import { AnimatePresence, motion } from "framer-motion";
 interface NavBarProps {
 	whatWeOfferRef: RefObject<HTMLDivElement>;
 	contactUsRef: RefObject<HTMLDivElement>;
+	joinWaitlistButtonRef: RefObject<HTMLFormElement>;
 }
 
-export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef }) => {
+export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef, joinWaitlistButtonRef }) => {
 	const [scrollReport, setScrollReport] = useState(0);
 	useEffect(() => {
 		window?.addEventListener("scroll", () => {
@@ -67,7 +68,12 @@ export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef }) 
 				transition={{ duration: 0.22 }}
 				className="flex md:block gap-x-[18px] items-center"
 			>
-				<button className="h-[30px] lg:h-[60px] sm:h-[40px] w-[97px] sm:w-[120px] lg:w-[166px] font-semibold bg-eccblue text-[12px] sm:text-[15px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] relative active:translate-y-[2px] lg:active:translate-y-[5px] active:shadow-md transition-all text-white">Join Waitlist</button>
+				<button
+					onClick={() => joinWaitlistButtonRef.current?.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest" })}
+					className="h-[30px] lg:h-[60px] sm:h-[40px] w-[97px] sm:w-[120px] lg:w-[166px] font-semibold bg-eccblue text-[12px] sm:text-[15px] lg:text-[18px] rounded-[5px] lg:rounded-[12px] shadow-[0px_2px_0px_rgba(0,0,0,1)] lg:shadow-[0px_5px_0px_rgba(0,0,0,1)] relative active:translate-y-[2px] lg:active:translate-y-[5px] active:shadow-md transition-all text-white"
+				>
+					Join Waitlist
+				</button>
 				<div
 					onClick={() => setMobileNavShowing(true)}
 					className="block md:hidden active:scale-90 transition-[200ms]"
@@ -130,6 +136,10 @@ export const NavBar: React.FC<NavBarProps> = ({ whatWeOfferRef, contactUsRef }) 
 								initial={{ opacity: 0, y: 50 }}
 								exit={{ opacity: 0 }}
 								whileTap={{ scale: 0.95 }}
+								onClick={() => {
+									setMobileNavShowing(false);
+									joinWaitlistButtonRef.current?.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest" });
+								}}
 								animate={{ opacity: 1, y: 0, transition: { delay: 0.25, duration: 0.22 } }}
 								className="font-bold text-[14.67px] w-[142px] h-[44px] bg-eccblue rounded-[7.24px] text-white"
 							>
