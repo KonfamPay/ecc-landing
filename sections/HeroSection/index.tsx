@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 import { ThankYou } from "..";
 import { motion } from "framer-motion";
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+	joinWaitlistButtonRef: RefObject<HTMLFormElement>;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ joinWaitlistButtonRef }) => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
 	useEffect(() => {
 		if (isModalSHowing == true) {
@@ -83,7 +87,7 @@ export const HeroSection = () => {
 					complaints easily
 					<motion.figure
 						initial={{ opacity: 0 }}
-						animate={{ opacity: 1, transition: { delay: 1.1 } }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
 					>
 						<motion.img
 							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
@@ -107,7 +111,10 @@ export const HeroSection = () => {
 					transition={{ duration: 0.4, delay: 1.3 }}
 					className="mt-[36px] justify-center"
 				>
-					<form onSubmit={handleContactFormSubmit}>
+					<form
+						ref={joinWaitlistButtonRef}
+						onSubmit={handleContactFormSubmit}
+					>
 						<div className="flex w-full max-w-[329px] lg:max-w-[713px] gap-x-[7px] lg:gap-x-[21px]  mx-auto pb-[100px] md:pb-[140px] lg:pb-[178px]">
 							<input
 								type="email"
