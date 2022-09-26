@@ -28,51 +28,51 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 				<p className="max-w-[739px] text-center text-sm sm:text-xl mt-8">Join our fight against unsatisfied services and scam cases. Sign up for our waitlist to be the first person to know when we launch.</p>
 				<p className="max-w-[530px] text-center text-sm sm:text-xl mt-5">Email Address: konfampay@gmail.com</p>
 				<div className="mt-5 flex items-center justify-center space-x-5 sm:space-x-8">
-					<Link
-						href={"https://www.facebook.com/ecommercecomplaint"}
-						passHref
-					>
-						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
-							<a target="_blank">
+					<a target="_blank">
+						<Link
+							href={"https://www.facebook.com/konfampay"}
+							passHref
+						>
+							<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 								<Image
 									src="/assets/social-icons/Facebook.svg"
 									alt="Picture of the author"
 									layout="fill"
 									objectFit="contain"
 								/>
-							</a>
-						</div>
-					</Link>
-					<Link
-						href={"https://www.instagram.com/ecommercecomplaint/"}
-						passHref
-					>
-						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
-							<a target="_blank">
+							</div>
+						</Link>
+					</a>
+					<a target="_blank">
+						<Link
+							href={"https://www.instagram.com/ecommercecomplaint/"}
+							passHref
+						>
+							<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 								<Image
 									src="/assets/social-icons/Instagram.svg"
 									alt="Picture of the author"
 									layout="fill"
 									objectFit="contain"
 								/>
-							</a>
-						</div>
-					</Link>
-					<Link
-						href={"https://twitter.com/eccnigeria"}
-						passHref
-					>
-						<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
-							<a target="_blank">
+							</div>
+						</Link>
+					</a>
+					<a target="_blank">
+						<Link
+							href={"https://twitter.com/eccnigeria"}
+							passHref
+						>
+							<div className="w-[22px] sm:w-9 h-[22px] sm:h-9 relative cursor-pointer">
 								<Image
 									src="/assets/social-icons/Twitter.svg"
 									alt="Picture of the author"
 									layout="fill"
 									objectFit="contain"
 								/>
-							</a>
-						</div>
-					</Link>
+							</div>
+						</Link>
+					</a>
 				</div>
 			</div>
 			<hr className="bg-white border-white w-full max-w-[1352px] mx-auto border mt-9 sm:mt-14" />
