@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { ThankYou } from "..";
+import { motion } from "framer-motion";
 
 export const TiredOfGettingScammed = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	const [isDisabled, setIsDisabled] = useState<boolean>(false);
 	useEffect(() => {
 		if (isModalSHowing == true) {
 			document.body.style.overflow = "hidden";
@@ -21,6 +23,7 @@ export const TiredOfGettingScammed = () => {
 
 	const handleContactFormSubmit = async (e: any) => {
 		e.preventDefault();
+		setIsDisabled(true);
 		if (contactFormData.email.length > 10) {
 			try {
 				const response = await fetch("https://eccwaitlistbackend.herokuapp.com/waitlist", {
@@ -38,6 +41,10 @@ export const TiredOfGettingScammed = () => {
 						email: "",
 					});
 					setIsModalShowing(true);
+					setIsDisabled(false);
+				} else if (response.status === 205) {
+					window.alert("You have already registered for the waitlist 🎉");
+					setIsDisabled(false);
 				}
 			} catch (error: any) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
@@ -46,6 +53,7 @@ export const TiredOfGettingScammed = () => {
 					success: false,
 					message: error.message,
 				});
+				setIsDisabled(false);
 			}
 		} else {
 			window.alert("Email Address should be longer than 10 characters");
@@ -53,7 +61,7 @@ export const TiredOfGettingScammed = () => {
 	};
 	return (
 		<>
-			<div className="flex px-[0px] xl:px-[100px] justify-between items-center py-[20px] xl:pt-[235px] my-[100px] xl:mt-0">
+			<div className="flex px-[0px] xl:px-[100px] justify-between items-center py-[20px] xl:pt-[235px] my-[100px] xl:mt-0 max-w-[1290px] mx-auto">
 				<div className="bg-[#F1F7FE] px-[] xl:px-[32px] xl:rounded-[20px] pt-[74px] pb-[36px] xl:py-[82px] w-full relative">
 					<div className="xl:w-[700px] flex flex-col gap-[16px]">
 						<h1
@@ -87,8 +95,9 @@ export const TiredOfGettingScammed = () => {
 							<input
 								type="submit"
 								id="submit"
-								className="py-[6px] px-[12px] xl:py-[16px] xl:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] xl:rounded-[12px] text-[#FFFFFF] text-[12px] xl:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] xl:shadow-[0px_5px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-md transition-all xl:active:translate-y-[5px] cursor-pointer"
+								className={`py-[6px] px-[12px] xl:py-[16px] xl:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] xl:rounded-[12px] text-[#FFFFFF] text-[12px] xl:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] xl:shadow-[0px_5px_0px_rgba(0,0,0,1)] transition-all ${!isDisabled ? "active:translate-y-[2px] active:shadow-md xl:active:translate-y-[5px] cursor-pointer" : "cursor-not-allowed"}`}
 								value="Join Waitlist"
+								disabled={isDisabled}
 							/>
 						</form>
 					</div>
@@ -109,21 +118,38 @@ export const TiredOfGettingScammed = () => {
 						alt="blue-dot"
 						className="w-[30px] lg:w-[unset] absolute top-[-15px] lg:top-[unset] right-[15px] lg:bottom-[-28px] lg:right-[95px]"
 					/>
-					<img
-						src="assets/Images/blackPolygon.png"
-						alt="black-polygon"
-						className="absolute w-[14.43px] lg:w-[unset] right-[138px] lg:right-[unset] bottom-[1px] lg:bottom-[-45px] lg:left-[48px]"
-					/>
-					<img
-						src="assets/Images/smallBlackPolygon.png"
-						alt="black-polygon"
-						className="absolute w-[14.43px] lg:w-[unset] top-[12px] lg:top-[unset] right-[86px] bottom-[-65px] lg:right-[280px]"
-					/>
-					<img
-						src="assets/Images/bluePolygon.png"
-						alt="Blue-polygon"
-						className="absolute left-[81px] lg:left-[unset] lg:hidden xl:block top-[-35px] lg:top-[unset] w-[14.43px] lg:w-[unset] lg:bottom-[29px] lg:right-[337px]"
-					/>
+					<motion.figure
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
+					>
+						<motion.img
+							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
+							className="absolute w-[14.43px] lg:w-[unset] right-[138px] lg:right-[unset] bottom-[1px] lg:bottom-[-45px] lg:left-[48px]"
+							src="assets/Images/blackPolygon.png"
+						/>
+					</motion.figure>
+
+					<motion.figure
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
+					>
+						<motion.img
+							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
+							src="assets/Images/smallBlackPolygon.png"
+							className="absolute w-[14.43px] lg:w-[unset] top-[12px] lg:top-[unset] right-[86px] bottom-[-65px] lg:right-[280px]"
+						/>
+					</motion.figure>
+
+					<motion.figure
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
+					>
+						<motion.img
+							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
+							src="assets/Images/bluePolygon.png"
+							className="absolute left-[81px] lg:left-[unset] lg:hidden xl:block top-[-35px] lg:top-[unset] w-[14.43px] lg:w-[unset] lg:bottom-[29px] lg:right-[337px]"
+						/>
+					</motion.figure>
 				</div>
 			</div>
 			{isModalSHowing && <ThankYou setIsModalShowing={() => setIsModalShowing(!isModalSHowing)} />}
