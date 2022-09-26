@@ -11,7 +11,10 @@ export const Footer: React.FC<FooterProps> = ({ sectionRef }) => {
 			ref={sectionRef}
 			className="bg-black text-white px-4 sm:px-11 lg:mt-[100px]"
 		>
-			<div className="flex flex-col items-center justify-center sm:font-medium  pt-14">
+			<div
+				data-aos="zoom-in"
+				className="flex flex-col items-center justify-center sm:font-medium  pt-14"
+			>
 				<div className="w-[51px] sm:w-[100px] h-[51px] sm:h-[100px] flex items-center justify-center bg-clearblue rounded-full">
 					<div className="w-[32.65px] sm:w-[65px] h-[11px] sm:h-[22px] relative">
 						<Image
