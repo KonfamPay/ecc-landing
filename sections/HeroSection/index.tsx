@@ -46,6 +46,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ joinWaitlistButtonRef 
 					});
 					setIsModalShowing(true);
 					setIsDisabled(false);
+				} else if (response.status === 205) {
+					window.alert("You have already registered for the waitlist 🎉");
+					setIsDisabled(false);
 				}
 			} catch (error: any) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
