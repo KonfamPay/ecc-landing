@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ThankYou } from "..";
+import { motion } from "framer-motion";
 
 export const TiredOfGettingScammed = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
@@ -114,21 +115,38 @@ export const TiredOfGettingScammed = () => {
 						alt="blue-dot"
 						className="w-[30px] lg:w-[unset] absolute top-[-15px] lg:top-[unset] right-[15px] lg:bottom-[-28px] lg:right-[95px]"
 					/>
-					<img
-						src="assets/Images/blackPolygon.png"
-						alt="black-polygon"
-						className="absolute w-[14.43px] lg:w-[unset] right-[138px] lg:right-[unset] bottom-[1px] lg:bottom-[-45px] lg:left-[48px]"
-					/>
-					<img
-						src="assets/Images/smallBlackPolygon.png"
-						alt="black-polygon"
-						className="absolute w-[14.43px] lg:w-[unset] top-[12px] lg:top-[unset] right-[86px] bottom-[-65px] lg:right-[280px]"
-					/>
-					<img
-						src="assets/Images/bluePolygon.png"
-						alt="Blue-polygon"
-						className="absolute left-[81px] lg:left-[unset] lg:hidden xl:block top-[-35px] lg:top-[unset] w-[14.43px] lg:w-[unset] lg:bottom-[29px] lg:right-[337px]"
-					/>
+					<motion.figure
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
+					>
+						<motion.img
+							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
+							className="absolute w-[14.43px] lg:w-[unset] right-[138px] lg:right-[unset] bottom-[1px] lg:bottom-[-45px] lg:left-[48px]"
+							src="assets/Images/blackPolygon.png"
+						/>
+					</motion.figure>
+
+					<motion.figure
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
+					>
+						<motion.img
+							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
+							src="assets/Images/smallBlackPolygon.png"
+							className="absolute w-[14.43px] lg:w-[unset] top-[12px] lg:top-[unset] right-[86px] bottom-[-65px] lg:right-[280px]"
+						/>
+					</motion.figure>
+
+					<motion.figure
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1, transition: { delay: 1.3 } }}
+					>
+						<motion.img
+							animate={{ rotateZ: [0, 720], transition: { repeat: Infinity, duration: 4 } }}
+							src="assets/Images/bluePolygon.png"
+							className="absolute left-[81px] lg:left-[unset] lg:hidden xl:block top-[-35px] lg:top-[unset] w-[14.43px] lg:w-[unset] lg:bottom-[29px] lg:right-[337px]"
+						/>
+					</motion.figure>
 				</div>
 			</div>
 			{isModalSHowing && <ThankYou setIsModalShowing={() => setIsModalShowing(!isModalSHowing)} />}

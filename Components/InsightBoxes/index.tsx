@@ -16,7 +16,7 @@ const Box: React.FC<BoxProps> = ({ item1, item2, item3, item4, type, direction }
 			{type == "big" ? (
 				<div
 					data-aos="fade-up"
-					style={{ width: "200px" }}
+					style={{ width: "200px", marginRight: "10px" }}
 					className="flex flex-col items-center  justify-center h-[200px] bg-white border-[3px] mr-2 border-solid border-eccblue rounded-[14px]"
 				>
 					<p className="font-semibold text-[16px]">{item1}</p>
