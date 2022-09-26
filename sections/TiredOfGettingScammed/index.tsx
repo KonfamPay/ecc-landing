@@ -3,6 +3,7 @@ import { ThankYou } from "..";
 
 export const TiredOfGettingScammed = () => {
 	const [isModalSHowing, setIsModalShowing] = useState<boolean>(false);
+	const [isDisabled, setIsDisabled] = useState<boolean>(false);
 	useEffect(() => {
 		if (isModalSHowing == true) {
 			document.body.style.overflow = "hidden";
@@ -21,6 +22,7 @@ export const TiredOfGettingScammed = () => {
 
 	const handleContactFormSubmit = async (e: any) => {
 		e.preventDefault();
+		setIsDisabled(true);
 		if (contactFormData.email.length > 10) {
 			try {
 				const response = await fetch("https://eccwaitlistbackend.herokuapp.com/waitlist", {
@@ -38,6 +40,7 @@ export const TiredOfGettingScammed = () => {
 						email: "",
 					});
 					setIsModalShowing(true);
+					setIsDisabled(false);
 				}
 			} catch (error: any) {
 				window.alert("Error Sending Message 😢. Try again 🤕.");
@@ -46,6 +49,7 @@ export const TiredOfGettingScammed = () => {
 					success: false,
 					message: error.message,
 				});
+				setIsDisabled(false);
 			}
 		} else {
 			window.alert("Email Address should be longer than 10 characters");
@@ -87,8 +91,9 @@ export const TiredOfGettingScammed = () => {
 							<input
 								type="submit"
 								id="submit"
-								className="py-[6px] px-[12px] xl:py-[16px] xl:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] xl:rounded-[12px] text-[#FFFFFF] text-[12px] xl:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] xl:shadow-[0px_5px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-md transition-all xl:active:translate-y-[5px] cursor-pointer"
+								className={`py-[6px] px-[12px] xl:py-[16px] xl:px-[28px] bg-[#0B63C5] font-medium rounded-[5px] xl:rounded-[12px] text-[#FFFFFF] text-[12px] xl:text-[18px] shadow-[0px_2px_0px_rgba(0,0,0,1)] xl:shadow-[0px_5px_0px_rgba(0,0,0,1)] transition-all ${!isDisabled ? "active:translate-y-[2px] active:shadow-md xl:active:translate-y-[5px] cursor-pointer" : "cursor-not-allowed"}`}
 								value="Join Waitlist"
+								disabled={isDisabled}
 							/>
 						</form>
 					</div>
