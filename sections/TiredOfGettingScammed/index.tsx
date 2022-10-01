@@ -26,7 +26,7 @@ export const TiredOfGettingScammed = () => {
 		setIsDisabled(true);
 		if (contactFormData.email.length > 10) {
 			try {
-				const response = await fetch("https://eccwaitlistbackend.herokuapp.com/waitlist", {
+				const response = await fetch("https://ecc-waitlist-backend.herokuapp.com/waitlist", {
 					method: "POST",
 					headers: {
 						Accept: "application/json, text/plain, */*",
