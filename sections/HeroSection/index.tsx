@@ -38,15 +38,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ joinWaitlistButtonRef 
 					},
 					body: JSON.stringify(contactFormData).trim(),
 				});
-
-				if (response.status === 201) {
+				if (response.status === 200) {
 					setFormState({ submitted: true, success: true });
 					setContactFormData({
 						email: "",
 					});
 					setIsModalShowing(true);
 					setIsDisabled(false);
-				} else if (response.status === 205) {
+				} else if (response.status === 202) {
 					window.alert("You have already registered for the waitlist 🎉");
 					setIsDisabled(false);
 				}
